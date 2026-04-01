@@ -11,7 +11,7 @@
    | `publisher` | Venue or journal (e.g. `ICLR`, `NeurIPS`, `Arxiv`). |
    | `year` | Four-digit year. |
    | `link` | Canonical URL (arXiv, OpenReview, DOI, etc.). |
-   | `authors` | Comma-separated names. |
+   | `authors` | Optional; kept in the CSV for reference but **not shown** in the generated README. |
    | `code` | Repository URL, or leave empty. |
    | `llm_for_co` | Set to `1` (or `yes`) to also list the paper in **§1 LLM for Combinatorial Optimization** at the top of the README. Leave empty for neural-only / non-LLM work. |
 

@@ -132,22 +132,7 @@ def _shield_static(
     return "https://img.shields.io/static/v1?" + "&".join(parts)
 
 
-def _typing_svg_url(lines: list[str]) -> str:
-    """Animated rotating lines (renders as SVG on GitHub). Uses readme-typing-svg.demolab.com."""
-    enc = ";".join(line.strip().replace(" ", "+") for line in lines if line.strip())
-    return (
-        "https://readme-typing-svg.demolab.com/?"
-        f"lines={enc}"
-        "&font=Inter&weight=600&size=24"
-        "&duration=2600&pause=1000"
-        "&color=312E81"
-        "&background=transparent"
-        "&center=true&vCenter=true&width=680&height=50"
-        "&repeat=true"
-    )
-
-
-def _write_at_a_glance(
+def _write_stat_badges(
     file,
     *,
     n_papers: int,
@@ -156,20 +141,8 @@ def _write_at_a_glance(
     n_categories: int,
     n_with_code: int,
 ) -> None:
-    """Centered hero line + flat Shields row; wording uses 'papers' not CSV rows."""
-    typing_lines = [
-        "Learning4CO",
-        f"{n_papers} papers indexed",
-        f"{n_llm} tagged for LLM for CO",
-        f"{survey_n} in survey section",
-        f"{n_categories} problem categories",
-        f"{n_with_code} with code repo",
-    ]
-    file.write("### At a glance\n\n")
-    file.write(
-        '<div align="center">\n\n'
-        f'<img src="{_typing_svg_url(typing_lines)}" alt="Learning4CO" />\n\n'
-    )
+    """Centered flat Shields row; counts use plain 'papers' wording (no 'indexed')."""
+    file.write('<div align="center">\n\n')
     badges: list[tuple[str, str, str, str | None]] = [
         ("Papers", str(n_papers), "4f46e5", "bookstack"),
         ("LLM for CO", str(n_llm), "7c3aed", "openai"),
@@ -203,7 +176,7 @@ def _write_at_a_glance(
 
 
 def _write_paper_entry(file, num: int, paper: list[str]) -> None:
-    """One bibliography line + optional indented authors; compact vertical spacing."""
+    """One bibliography line (title, venue, year, links); authors omitted for a uniform list."""
     if paper[6] == "":
         line = "{}. **{}** {}, {}. [{}]({})".format(
             num, paper[1], paper[2], paper[3], "paper", paper[4]
@@ -218,10 +191,7 @@ def _write_paper_entry(file, num: int, paper: list[str]) -> None:
             paper[4],
             paper[6],
         )
-    file.write(line + "\n")
-    if paper[5]:
-        file.write("    *{}*\n".format(paper[5]))
-    file.write("\n")
+    file.write(line + "\n\n")
 
 
 def csv2md(csv_path, md_path, header_path):
@@ -286,7 +256,7 @@ def csv2md(csv_path, md_path, header_path):
         file.write(header_text)
         file.write("\n\n")
         survey_n = section_counts.get("Survey Papers", 0)
-        _write_at_a_glance(
+        _write_stat_badges(
             file,
             n_papers=n_total,
             n_llm=len(llm_list),
