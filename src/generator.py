@@ -1,8 +1,7 @@
 """
 Build README.md for Learning4CO from data/papers.csv.
-Section order: (1) LLM for CO — rows with non-empty llm_for_co;
-               (2) Survey Papers;
-               (3) Problems — fixed PROBLEM_CATEGORY_ORDER in this file.
+Section order: (1) LLM for CO — benchmark-titled rows (full CSV), then llm_for_co rows
+               not already listed there; (2) Survey Papers; (3) Problems.
 """
 from __future__ import annotations
 
@@ -96,6 +95,11 @@ def _norm_link(link: str) -> str:
         return link.strip().lower()
 
 
+def _paper_dedupe_key(paper: list[str]) -> str:
+    """Stable key for a CSV row (normalised link, else title|year)."""
+    return _norm_link(paper[4]) or f"{paper[1].strip().lower()}|{paper[3].strip()}"
+
+
 def _year_desc_key(paper: list) -> tuple:
     """Newest year first; same year ordered by title; bad/missing year last."""
     y_raw = (paper[3] or "").strip()
@@ -130,6 +134,12 @@ def _shield_static(
         parts.append(f"logo={quote(logo)}")
         parts.append(f"logoColor={quote(logo_color)}")
     return "https://img.shields.io/static/v1?" + "&".join(parts)
+
+
+def _papers_badge_img(n: int) -> str:
+    """Flat-square shield matching the README stats row (papers count)."""
+    url = _shield_static("papers", str(n), "4f46e5", style="flat-square")
+    return f'<img src="{url}" alt="{n} papers" />'
 
 
 def _write_stat_badges(
@@ -239,22 +249,41 @@ def csv2md(csv_path, md_path, header_path):
         flag = (paper[7] or "").strip().lower()
         if flag in ("", "0", "no", "false"):
             continue
-        key = _norm_link(paper[4]) or f"{paper[1].strip().lower()}|{paper[3].strip()}"
+        key = _paper_dedupe_key(paper)
         if key in seen:
             continue
         seen.add(key)
         llm_list.append(copy.deepcopy(paper))
     llm_list.sort(key=_year_desc_key, reverse=True)
 
+    # Benchmark block: title contains "benchmark" (case-insensitive), entire CSV, same dedupe key
+    bench_list = []
+    seen_bench = set()
+    for paper in raw_papers:
+        if "benchmark" not in (paper[1] or "").lower():
+            continue
+        key = _paper_dedupe_key(paper)
+        if key in seen_bench:
+            continue
+        seen_bench.add(key)
+        bench_list.append(copy.deepcopy(paper))
+    bench_list.sort(key=_year_desc_key, reverse=True)
+    bench_keys = set(seen_bench)
+    llm_rest = [p for p in llm_list if _paper_dedupe_key(p) not in bench_keys]
+
     section_counts: Counter[str] = Counter(p[0] for p in papers)
     n_with_code = sum(1 for p in raw_papers if (p[6] or "").strip())
     n_total = len(raw_papers)
 
-    header_text = Path(header_path).read_text(encoding="utf-8").strip()
+    raw_header = Path(header_path).read_text(encoding="utf-8").strip()
+    header_lines = raw_header.splitlines()
+    if header_lines and header_lines[0].strip() == "# Learning4CO":
+        header_body = "\n".join(header_lines[1:]).strip()
+    else:
+        header_body = raw_header
 
     with open(md_path, "w", encoding="utf-8") as file:
-        file.write(header_text)
-        file.write("\n\n")
+        file.write("# Learning4CO\n\n")
         survey_n = section_counts.get("Survey Papers", 0)
         _write_stat_badges(
             file,
@@ -264,6 +293,9 @@ def csv2md(csv_path, md_path, header_path):
             n_categories=len(problem_classes),
             n_with_code=n_with_code,
         )
+        if header_body:
+            file.write(header_body)
+            file.write("\n\n")
         file.write("---\n\n")
         file.write("## [Content](#content)\n\n")
         file.write("### Navigate\n\n")
@@ -327,22 +359,42 @@ def csv2md(csv_path, md_path, header_path):
         file.write("---\n\n")
 
         # --- 1. LLM for Combinatorial Optimization ---
-        file.write("### [LLM for Combinatorial Optimization](#content)")
-        if llm_list:
-            file.write(f" · *{len(llm_list)} papers*")
-        file.write("\n\n")
+        # Explicit anchors: GitHub slugs include " · N papers" when it is on the same heading line,
+        # so #llm-for-combinatorial-optimization / #survey-papers would miss the target otherwise.
+        file.write('<a id="llm-for-combinatorial-optimization"></a>\n\n')
+        n_llm_section = len(bench_list) + len(llm_rest)
         file.write(
-            "Papers on **LLM for combinatorial optimization** — work where large language models "
-            "(or closely related agents and tool use) are central to CO.\n\n"
+            "### [LLM for Combinatorial Optimization](#content) {}\n\n".format(
+                _papers_badge_img(n_llm_section)
+            )
         )
-        if not llm_list:
-            file.write("*No papers in this section yet.*\n\n")
+        file.write('<a id="llm-benchmark-papers"></a>\n')
+        file.write(
+            "### [Benchmark papers](#content) {}\n\n".format(_papers_badge_img(len(bench_list)))
+        )
+        if not bench_list:
+            file.write("*No papers.*\n\n")
         else:
             num = 0
-            for paper in llm_list:
+            for paper in bench_list:
                 paper = [p.strip() for p in paper]
                 num += 1
                 _write_paper_entry(file, num, paper)
+
+        file.write('<a id="llm-for-co-core"></a>\n')
+        file.write(
+            "### [LLM for CO](#content) {}\n\n".format(_papers_badge_img(len(llm_rest)))
+        )
+        if not llm_rest:
+            file.write("*No papers.*\n\n")
+        else:
+            num = 0
+            for paper in llm_rest:
+                paper = [p.strip() for p in paper]
+                num += 1
+                _write_paper_entry(file, num, paper)
+
+        file.write("---\n\n")
 
         # --- 2. Survey + 3. Problems (existing flow) ---
         category = None
@@ -352,13 +404,24 @@ def csv2md(csv_path, md_path, header_path):
             if category is None:
                 category = paper[0]
                 cnt = section_counts.get(category, 0)
-                file.write("### [{}](#content) · *{} papers*\n\n".format(category, cnt))
+                if category == "Survey Papers":
+                    file.write('<a id="survey-papers"></a>\n\n')
+                else:
+                    file.write('<a id="problems"></a>\n\n')
+                    file.write("## [Problems](#content)\n\n")
+                file.write(
+                    "### [{}](#content) {}\n\n".format(category, _papers_badge_img(cnt))
+                )
             elif paper[0] != category:
                 if category == "Survey Papers":
-                    file.write("---\n\n## [Problems](#content)\n\n")
+                    file.write("---\n\n")
+                    file.write('<a id="problems"></a>\n\n')
+                    file.write("## [Problems](#content)\n\n")
                 category = paper[0]
                 cnt = section_counts.get(category, 0)
-                file.write("### [{}](#content) · *{} papers*\n\n".format(category, cnt))
+                file.write(
+                    "### [{}](#content) {}\n\n".format(category, _papers_badge_img(cnt))
+                )
                 num = 0
             num += 1
             _write_paper_entry(file, num, paper)

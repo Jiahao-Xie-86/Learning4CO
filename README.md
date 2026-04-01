@@ -1,7 +1,5 @@
 # Learning4CO
 
-**Learning for combinatorial optimization** — a personal curated reading list that maps **neural and learning-based methods** (organized by problem) together with a front section on **LLMs and agents for CO**, so you can explore both research threads in one place.
-
 <div align="center">
 
 <p dir="auto">
@@ -13,6 +11,10 @@
 </p>
 
 </div>
+
+**Learning for combinatorial optimization** — a personal curated reading list that maps **neural and learning-based methods** (organized by problem) together with a front section on **LLMs and agents for CO**, so you can explore both research threads in one place.
+
+To **add or update a paper**, see [CONTRIBUTING.md](CONTRIBUTING.md) (edit `data/papers.csv`, run `python src/generator.py`, open a PR).
 
 ---
 
@@ -120,9 +122,29 @@ Papers by <strong>problem type</strong> (TSP, MIP, SAT, …)</td></tr>
 
 ---
 
-### [LLM for Combinatorial Optimization](#content) · *141 papers*
+<a id="llm-for-combinatorial-optimization"></a>
 
-Papers on **LLM for combinatorial optimization** — work where large language models (or closely related agents and tool use) are central to CO.
+### [LLM for Combinatorial Optimization](#content) <img src="https://img.shields.io/static/v1?label=papers&message=141&color=4f46e5&style=flat-square" alt="141 papers" />
+
+<a id="llm-benchmark-papers"></a>
+### [Benchmark papers](#content) <img src="https://img.shields.io/static/v1?label=papers&message=7&color=4f46e5&style=flat-square" alt="7 papers" />
+
+1. **Reasoning in a Combinatorial and Constrained World: Benchmarking LLMs on Natural-Language Combinatorial Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.02188)
+
+2. **HeuriGym: An Agentic Benchmark for LLM-Crafted Heuristics in Combinatorial Optimization** ICLR, 2026. [paper](https://arxiv.org/abs/2506.07972), [code](https://github.com/cornell-zhang/heurigym)
+
+3. **ConstraintBench: Benchmarking LLM Constraint Reasoning on Direct Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.22465)
+
+4. **ML4CO-Bench-101: Benchmark Machine Learning for Classic Combinatorial Problems on Graphs** NeurIPS, 2025. [paper](https://openreview.net/forum?id=ye4ntB1Kzi), [code](https://github.com/Thinklab-SJTU/ML4CO-Bench-101)
+
+5. **CO-Bench: Benchmarking Language Model Agents in Algorithm Search for Combinatorial Optimization** AAAI, 2025. [paper](https://arxiv.org/pdf/2504.04310)
+
+6. **ALE-Bench: A Benchmark for Long-Horizon Objective-Driven Algorithm Engineering** NeurIPS 2025 Datasets and Benchmarks Track, 2025. [paper](https://arxiv.org/pdf/2506.09050), [code](https://github.com/SakanaAI/ALE-Bench)
+
+7. **NPHardEval: Dynamic Benchmark on Reasoning Ability of Large Language Models via Complexity Classes** ACL, 2023. [paper](https://arxiv.org/pdf/2312.14890), [code](https://github.com/casmlab/NPHardEval)
+
+<a id="llm-for-co-core"></a>
+### [LLM for CO](#content) <img src="https://img.shields.io/static/v1?label=papers&message=134&color=4f46e5&style=flat-square" alt="134 papers" />
 
 1. **ViTSP: A Vision Language Models Guided Framework for Solving Large-Scale Traveling Salesman Problems** ICLR, 2026. [paper](https://arxiv.org/abs/2509.23465), [code](https://github.itap.purdue.edu/uSMART/ViTSP_ICLR2026)
 
@@ -130,283 +152,273 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 3. **Refining Hybrid Genetic Search for CVRP via Reinforcement Learning-Finetuned LLM** ICLR, 2026. [paper](https://arxiv.org/abs/2510.11121), [code](https://github.com/zaodushi/RFTHGS)
 
-4. **Reasoning in a Combinatorial and Constrained World: Benchmarking LLMs on Natural-Language Combinatorial Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.02188)
+4. **PathWise: Planning through World Model for Automated Heuristic Design via Self-Evolving LLMs** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.20539)
 
-5. **PathWise: Planning through World Model for Automated Heuristic Design via Self-Evolving LLMs** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.20539)
+5. **OR-Agent: Bridging Evolutionary Search and Structured Research for Automated Algorithm Discovery** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.13869), [code](https://github.com/qiliuchn/OR-Agent)
 
-6. **OR-Agent: Bridging Evolutionary Search and Structured Research for Automated Algorithm Discovery** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.13869), [code](https://github.com/qiliuchn/OR-Agent)
+6. **LLM-Assisted Automatic Dispatching Rule Design for Dynamic Flexible Assembly Flow Shop Scheduling** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.15738)
 
-7. **LLM-Assisted Automatic Dispatching Rule Design for Dynamic Flexible Assembly Flow Shop Scheduling** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.15738)
+7. **LLaMEA-SAGE: Guiding Automated Algorithm Design with Structural Feedback from Explainable AI** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.21511)
 
-8. **LLaMEA-SAGE: Guiding Automated Algorithm Design with Structural Feedback from Explainable AI** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.21511)
+8. **Heuristic Search as Language-Guided Program Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.16038)
 
-9. **Heuristic Search as Language-Guided Program Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.16038)
+9. **Hard Constraints Meet Soft Generation: Guaranteed Feasibility for LLM-based Combinatorial Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.01090)
 
-10. **HeuriGym: An Agentic Benchmark for LLM-Crafted Heuristics in Combinatorial Optimization** ICLR, 2026. [paper](https://arxiv.org/abs/2506.07972), [code](https://github.com/cornell-zhang/heurigym)
+10. **Generalizable Heuristic Generation Through LLMs with Meta-Optimization** ICLR, 2026. [paper](https://arxiv.org/abs/2505.20881), [code](https://github.com/yiding-s/MoH)
 
-11. **Hard Constraints Meet Soft Generation: Guaranteed Feasibility for LLM-based Combinatorial Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.01090)
+11. **Game-Theoretic Co-Evolution for LLM-Based Heuristic Discovery** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.22896)
 
-12. **Generalizable Heuristic Generation Through LLMs with Meta-Optimization** ICLR, 2026. [paper](https://arxiv.org/abs/2505.20881), [code](https://github.com/yiding-s/MoH)
+12. **G-LNS: Generative Large Neighborhood Search for LLM-Based Automatic Heuristic Design** Arxiv, 2026. [paper](https://arxiv.org/abs/2602.08253), [code](https://github.com/ZBoyn/G-LNS)
 
-13. **Game-Theoretic Co-Evolution for LLM-Based Heuristic Discovery** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.22896)
+13. **From Heuristic Selection to Automated Algorithm Design: LLMs Benefit from Strong Priors** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.02792), [code](https://github.com/BaronH07/BAG)
 
-14. **G-LNS: Generative Large Neighborhood Search for LLM-Based Automatic Heuristic Design** Arxiv, 2026. [paper](https://arxiv.org/abs/2602.08253), [code](https://github.com/ZBoyn/G-LNS)
+14. **EvoX: Meta-Evolution for Automated Discovery** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.23413), [code](https://github.com/skydiscover-ai/skydiscover)
 
-15. **From Heuristic Selection to Automated Algorithm Design: LLMs Benefit from Strong Priors** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.02792), [code](https://github.com/BaronH07/BAG)
+15. **Evolving Interdependent Operators with Large Language Models for Multi-Objective Combinatorial Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.17899)
 
-16. **EvoX: Meta-Evolution for Automated Discovery** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.23413), [code](https://github.com/skydiscover-ai/skydiscover)
+16. **EoH-S: Evolution of Heuristic Set using LLMs for Automated Heuristic Design** AAAI, 2026. [paper](https://arxiv.org/abs/2508.03082), [code](https://github.com/FeiLiu36/EoH-S)
 
-17. **Evolving Interdependent Operators with Large Language Models for Multi-Objective Combinatorial Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.17899)
+17. **Enhancing CVRP Solver through LLM-driven Automatic Heuristic Design** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.23092)
 
-18. **EoH-S: Evolution of Heuristic Set using LLMs for Automated Heuristic Design** AAAI, 2026. [paper](https://arxiv.org/abs/2508.03082), [code](https://github.com/FeiLiu36/EoH-S)
+18. **DyACE: Dynamic Algorithm Co-evolution for Online Automated Heuristic Design with Large Language Model** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.13344)
 
-19. **Enhancing CVRP Solver through LLM-driven Automatic Heuristic Design** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.23092)
+19. **DSevolve: Enabling Real-Time Adaptive Scheduling on Dynamic Shop Floor with LLM-Evolved Heuristic Portfolios** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.27628)
 
-20. **DyACE: Dynamic Algorithm Co-evolution for Online Automated Heuristic Design with Large Language Model** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.13344)
+20. **DRAGON: LLM-Driven Decomposition and Reconstruction Agents for Large-Scale Combinatorial Optimization** AAMAS, 2026. [paper](https://arxiv.org/abs/2601.06502)
 
-21. **DSevolve: Enabling Real-Time Adaptive Scheduling on Dynamic Shop Floor with LLM-Evolved Heuristic Portfolios** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.27628)
+21. **CDEoH: Category-Driven Automatic Algorithm Design With Large Language Models** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.19284)
 
-22. **DRAGON: LLM-Driven Decomposition and Reconstruction Agents for Large-Scale Combinatorial Optimization** AAMAS, 2026. [paper](https://arxiv.org/abs/2601.06502)
+22. **Bridging Synthetic and Real Routing Problems via LLM-Guided Instance Generation and Progressive Adaptation** AAAI, 2026. [paper](https://arxiv.org/abs/2511.10233), [code](https://github.com/HenryZhu1029/EvoReal)
 
-23. **ConstraintBench: Benchmarking LLM Constraint Reasoning on Direct Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.22465)
+23. **Beyond the Node: Clade-level Selection for Efficient MCTS in Automatic Heuristic Design** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.00549)
 
-24. **CDEoH: Category-Driven Automatic Algorithm Design With Large Language Models** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.19284)
+24. **AVO: Agentic Variation Operators for Autonomous Evolutionary Search** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.24517)
 
-25. **Bridging Synthetic and Real Routing Problems via LLM-Guided Instance Generation and Progressive Adaptation** AAAI, 2026. [paper](https://arxiv.org/abs/2511.10233), [code](https://github.com/HenryZhu1029/EvoReal)
+25. **Algorithmic Prompt-Augmentation for Efficient LLM-Based Heuristic Design for A* Search** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.19622), [code](https://github.com/tb-git-tud/a-ceoh-evolution-of-heuristics)
 
-26. **Beyond the Node: Clade-level Selection for Efficient MCTS in Automatic Heuristic Design** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.00549)
+26. **AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.20133), [code](https://github.com/skydiscover-ai/skydiscover)
 
-27. **AVO: Agentic Variation Operators for Autonomous Evolutionary Search** Arxiv, 2026. [paper](https://arxiv.org/pdf/2603.24517)
+27. **X-evolve: Solution space evolution powered by large language models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2508.07932)
 
-28. **An Agentic Framework with LLMs for Solving Complex Vehicle Routing Problems** ICLR, 2026. [paper](https://openreview.net/forum?id=BMOgYw4EhQ), [code](https://github.com/ZHANG-NI/AFL)
+28. **VRPAgent: LLM-Driven Discovery of Heuristic Operators for Vehicle Routing Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.07073), [code](https://github.com/ai4co/vrpagent)
 
-29. **Algorithmic Prompt-Augmentation for Efficient LLM-Based Heuristic Design for A* Search** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.19622), [code](https://github.com/tb-git-tud/a-ceoh-evolution-of-heuristics)
+29. **ThetaEvolve: Test-time Learning on Open Problems** Arxiv, 2025. [paper](https://arxiv.org/abs/2511.23473)
 
-30. **AdaEvolve: Adaptive LLM Driven Zeroth-Order Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.20133), [code](https://github.com/skydiscover-ai/skydiscover)
+30. **Text2Zinc: A Cross-Domain Dataset for Modeling Optimization and Satisfaction Problems in MiniZinc** Arxiv, 2025. [paper](https://arxiv.org/pdf/2503.10642), [code](https://huggingface.co/datasets/skadio/text2zinc)
 
-31. **X-evolve: Solution space evolution powered by large language models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2508.07932)
+31. **STRCMP: Integrating Graph Structural Priors with Language Models for Combinatorial Optimization** NeurIPS, 2025. [paper](https://arxiv.org/pdf/2506.11057)
 
-32. **VRPAgent: LLM-Driven Discovery of Heuristic Operators for Vehicle Routing Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.07073), [code](https://github.com/ai4co/vrpagent)
+32. **StepORLM: A Self-Evolving Framework With Generative Process Supervision For Operations Research Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.22558)
 
-33. **ThetaEvolve: Test-time Learning on Open Problems** Arxiv, 2025. [paper](https://arxiv.org/abs/2511.23473)
+33. **Solver-Informed RL: Grounding Large Language Models for Authentic Optimization Modeling** NeurIPS, 2025. [paper](https://arxiv.org/pdf/2505.11792), [code](https://github.com/Cardinal-Operations/SIRL)
 
-34. **Text2Zinc: A Cross-Domain Dataset for Modeling Optimization and Satisfaction Problems in MiniZinc** Arxiv, 2025. [paper](https://arxiv.org/pdf/2503.10642), [code](https://huggingface.co/datasets/skadio/text2zinc)
+34. **ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution** ICLR, 2025. [paper](https://arxiv.org/pdf/2509.19349), [code](https://github.com/SakanaAI/ShinkaEvolve)
 
-35. **STRCMP: Integrating Graph Structural Priors with Language Models for Combinatorial Optimization** NeurIPS, 2025. [paper](https://arxiv.org/pdf/2506.11057)
+35. **RoCo: Role-Based LLMs Collaboration for Automatic Heuristic Design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2512.03762)
 
-36. **StepORLM: A Self-Evolving Framework With Generative Process Supervision For Operations Research Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.22558)
+36. **REMoH: A Reflective Evolution of Multi-objective Heuristics approach via Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.07759)
 
-37. **Solver-Informed RL: Grounding Large Language Models for Authentic Optimization Modeling** NeurIPS, 2025. [paper](https://arxiv.org/pdf/2505.11792), [code](https://github.com/Cardinal-Operations/SIRL)
+37. **ReflecSched: Solving Dynamic Flexible Job-Shop Scheduling via LLM-Powered Hierarchical Reflection** Arxiv, 2025. [paper](https://arxiv.org/pdf/2508.01724)
 
-38. **ShinkaEvolve: Towards Open-Ended And Sample-Efficient Program Evolution** ICLR, 2025. [paper](https://arxiv.org/pdf/2509.19349), [code](https://github.com/SakanaAI/ShinkaEvolve)
+38. **RedAHD: Reduction-Based End-to-End Automatic Heuristic Design with Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2505.20242)
 
-39. **RoCo: Role-Based LLMs Collaboration for Automatic Heuristic Design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2512.03762)
+39. **Planning of Heuristics: Strategic Planning on Large Language Models with Monte Carlo Tree Search for Automating Heuristic Optimization** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.11422)
 
-40. **REMoH: A Reflective Evolution of Multi-objective Heuristics approach via Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.07759)
+40. **Pareto-Grid-Guided Large Language Models for Fast and High-Quality Heuristics Design in Multi-Objective Combinatorial Optimization** AAAI, 2025. [paper](https://arxiv.org/pdf/2507.20923), [code](https://github.com/langkhachhoha/MPaGE)
 
-41. **ReflecSched: Solving Dynamic Flexible Job-Shop Scheduling via LLM-Powered Hierarchical Reflection** Arxiv, 2025. [paper](https://arxiv.org/pdf/2508.01724)
+41. **ORMind: A Cognitive-Inspired End-to-End Reasoning Framework for Operations Research** ACL, 2025. [paper](https://arxiv.org/pdf/2506.01326), [code](https://github.com/XiaoAI1989/ORMind)
 
-42. **RedAHD: Reduction-Based End-to-End Automatic Heuristic Design with Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2505.20242)
+42. **OR-LLM-Agent: Automating Modeling and Solving of Operations Research Optimization Problem with Reasoning Large Language Model** Arxiv, 2025. [paper](https://arxiv.org/pdf/2503.10009), [code](https://github.com/bwz96sco/or_llm_agent)
 
-43. **Planning of Heuristics: Strategic Planning on Large Language Models with Monte Carlo Tree Search for Automating Heuristic Optimization** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.11422)
+43. **OptiTree: Hierarchical Thoughts Generation with Tree Search for LLM Optimization Modeling** NeurIPS, 2025. [paper](https://arxiv.org/pdf/2510.22192), [code](https://github.com/MIRALab-USTC/OptiTree)
 
-44. **Pareto-Grid-Guided Large Language Models for Fast and High-Quality Heuristics Design in Multi-Objective Combinatorial Optimization** AAAI, 2025. [paper](https://arxiv.org/pdf/2507.20923), [code](https://github.com/langkhachhoha/MPaGE)
+44. **OptiMind: Teaching LLMs to Think Like Optimization Experts** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.22979)
 
-45. **ORMind: A Cognitive-Inspired End-to-End Reasoning Framework for Operations Research** ACL, 2025. [paper](https://arxiv.org/pdf/2506.01326), [code](https://github.com/XiaoAI1989/ORMind)
+45. **OptimAI: Optimization from Natural Language Using LLM-Powered AI Agents** Arxiv, 2025. [paper](https://arxiv.org/pdf/2504.16918)
 
-46. **OR-LLM-Agent: Automating Modeling and Solving of Operations Research Optimization Problem with Reasoning Large Language Model** Arxiv, 2025. [paper](https://arxiv.org/pdf/2503.10009), [code](https://github.com/bwz96sco/or_llm_agent)
+46. **OptiHive: Ensemble Selection for LLM-Based Optimization via Statistical Modeling** Arxiv, 2025. [paper](https://arxiv.org/pdf/2508.02503)
 
-47. **OptiTree: Hierarchical Thoughts Generation with Tree Search for LLM Optimization Modeling** NeurIPS, 2025. [paper](https://arxiv.org/pdf/2510.22192), [code](https://github.com/MIRALab-USTC/OptiTree)
+47. **OPT-BENCH: Evaluating LLM Agent on Large-Scale Search Spaces Optimization Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.10764), [code](https://github.com/OliverLeeXZ/OPT-BENCH)
 
-48. **OptiMind: Teaching LLMs to Think Like Optimization Experts** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.22979)
+48. **OpenEvolve: an open-source evolutionary coding agent** GitHub, 2025. [paper](https://huggingface.co/blog/codelion/openevolve), [code](https://github.com/algorithmicsuperintelligence/openevolve)
 
-49. **OptimAI: Optimization from Natural Language Using LLM-Powered AI Agents** Arxiv, 2025. [paper](https://arxiv.org/pdf/2504.16918)
+49. **Nested-Refinement Metamorphosis: Reflective Evolution for Efficient Optimization of Networking Problems** ACL, 2025. [paper](https://aclanthology.org/2025.findings-acl.895.pdf)
 
-50. **OptiHive: Ensemble Selection for LLM-Based Optimization via Statistical Modeling** Arxiv, 2025. [paper](https://arxiv.org/pdf/2508.02503)
+50. **MOTIF: Multi-strategy Optimization via Turn-based Interactive Framework** AAAI, 2025. [paper](https://arxiv.org/abs/2508.03929), [code](https://github.com/HaiAu2501/MOTIF)
 
-51. **OPT-BENCH: Evaluating LLM Agent on Large-Scale Search Spaces Optimization Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.10764), [code](https://github.com/OliverLeeXZ/OPT-BENCH)
+51. **Monte Carlo Tree Search for Comprehensive Exploration in LLM-Based Automatic Heuristic Design** ICML, 2025. [paper](https://arxiv.org/pdf/2501.08603), [code](https://github.com/zz1358m/MCTS-AHD-master)
 
-52. **OpenEvolve: an open-source evolutionary coding agent** GitHub, 2025. [paper](https://huggingface.co/blog/codelion/openevolve), [code](https://github.com/algorithmicsuperintelligence/openevolve)
+52. **MeLA: A Metacognitive LLM-Driven Architecture for Automatic Heuristic Design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.20541), [code](https://github.com/Qzs1335/MeLA)
 
-53. **Nested-Refinement Metamorphosis: Reflective Evolution for Efficient Optimization of Networking Problems** ACL, 2025. [paper](https://aclanthology.org/2025.findings-acl.895.pdf)
+53. **LLM4EO: Large Language Model for Evolutionary Optimization in Flexible Job Shop Scheduling** Arxiv, 2025. [paper](https://arxiv.org/pdf/2511.16485)
 
-54. **MOTIF: Multi-strategy Optimization via Turn-based Interactive Framework** AAAI, 2025. [paper](https://arxiv.org/abs/2508.03929), [code](https://github.com/HaiAu2501/MOTIF)
+54. **LLM-QUBO: An End-to-End Framework for Automated QUBO Transformation from Natural Language Problem Descriptions** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.00099)
 
-55. **Monte Carlo Tree Search for Comprehensive Exploration in LLM-Based Automatic Heuristic Design** ICML, 2025. [paper](https://arxiv.org/pdf/2501.08603), [code](https://github.com/zz1358m/MCTS-AHD-master)
+55. **LLM-Meta-SR: In-Context Learning for Evolving Selection Operators in Symbolic Regression** Arxiv, 2025. [paper](https://arxiv.org/abs/2505.18602)
 
-56. **MeLA: A Metacognitive LLM-Driven Architecture for Automatic Heuristic Design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.20541), [code](https://github.com/Qzs1335/MeLA)
+56. **LLM-Driven Instance-Specific Heuristic Generation and Selection** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.00490)
 
-57. **LLM4EO: Large Language Model for Evolutionary Optimization in Flexible Job Shop Scheduling** Arxiv, 2025. [paper](https://arxiv.org/pdf/2511.16485)
+57. **LLM-based Instance-driven Heuristic Bias in the Context of a Biased Random Key Genetic Algorithm** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.09707)
 
-58. **LLM-QUBO: An End-to-End Framework for Automated QUBO Transformation from Natural Language Problem Descriptions** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.00099)
+58. **Leveraging Large Language Models to Develop Heuristics for Emerging Optimization Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2503.03350), [code](https://github.com/nico-koltermann/contextual-evolution-of-heuristics)
 
-59. **LLM-Meta-SR: In-Context Learning for Evolving Selection Operators in Symbolic Regression** Arxiv, 2025. [paper](https://arxiv.org/abs/2505.18602)
+59. **Leveraging large language models for efficient scheduling in Human–Robot collaborative flexible manufacturing systems** npj Adv. Manuf., 2025. [paper](https://doi.org/10.1038/s44334-025-00061-w)
 
-60. **LLM-Driven Instance-Specific Heuristic Generation and Selection** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.00490)
+60. **Learn to Relax with Large Language Models: Solving Nonlinear Combinatorial Optimization Problems via Bidirectional Coevolution** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.12643)
 
-61. **LLM-based Instance-driven Heuristic Bias in the Context of a Biased Random Key Genetic Algorithm** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.09707)
+61. **Large Language Models for Combinatorial Optimization: A Systematic Review** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.03637)
 
-62. **Leveraging Large Language Models to Develop Heuristics for Emerging Optimization Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2503.03350), [code](https://github.com/nico-koltermann/contextual-evolution-of-heuristics)
+62. **Large Language Models as End-to-end Combinatorial Optimization Solvers** NeurIPS, 2025. [paper](https://neurips.cc/virtual/2025/loc/san-diego/poster/115835), [code](https://github.com/Summer142857/LLMCoSolver)
 
-63. **Leveraging large language models for efficient scheduling in Human–Robot collaborative flexible manufacturing systems** npj Adv. Manuf., 2025. [paper](https://doi.org/10.1038/s44334-025-00061-w)
+63. **Large Language Models as End-to-end Combinatorial Optimization Solvers** NeurIPS, 2025. [paper](https://arxiv.org/pdf/2509.16865), [code](https://github.com/Summer142857/LLMCoSolver)
 
-64. **Learn to Relax with Large Language Models: Solving Nonlinear Combinatorial Optimization Problems via Bidirectional Coevolution** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.12643)
+64. **Large Language Models and Operations Research: A Structured Survey** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.18180)
 
-65. **Large Language Models for Combinatorial Optimization: A Systematic Review** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.03637)
+65. **LAPPI: Interactive Optimization with LLM-Assisted Preference-Based Problem Instantiation** Arxiv, 2025. [paper](https://arxiv.org/pdf/2512.14138)
 
-66. **Large Language Models as End-to-end Combinatorial Optimization Solvers** NeurIPS, 2025. [paper](https://neurips.cc/virtual/2025/loc/san-diego/poster/115835), [code](https://github.com/Summer142857/LLMCoSolver)
+66. **Know the Ropes: A Heuristic Strategy for LLM-based Multi-Agent System Design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2505.16979)
 
-67. **Large Language Models as End-to-end Combinatorial Optimization Solvers** NeurIPS, 2025. [paper](https://arxiv.org/pdf/2509.16865), [code](https://github.com/Summer142857/LLMCoSolver)
+67. **irace-evo: Automatic Algorithm Configuration Extended With LLM-Based Code Evolution** Arxiv, 2025. [paper](https://arxiv.org/pdf/2511.14794)
 
-68. **Large Language Models and Operations Research: A Structured Survey** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.18180)
+68. **Improving Existing Optimization Algorithms with LLMs** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.08298)
 
-69. **LAPPI: Interactive Optimization with LLM-Assisted Preference-Based Problem Instantiation** Arxiv, 2025. [paper](https://arxiv.org/pdf/2512.14138)
+69. **HIFO-PROMPT: Prompting with Hindsight and Foresight For LLM-Based Automatic Heuristic Design** ICLR, 2025. [paper](https://arxiv.org/pdf/2508.13333)
 
-70. **Know the Ropes: A Heuristic Strategy for LLM-based Multi-Agent System Design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2505.16979)
+70. **HeurAgenix: Leveraging LLMs for Solving Complex Combinatorial Optimization Challenges** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.15196), [code](https://github.com/microsoft/HeurAgenix)
 
-71. **irace-evo: Automatic Algorithm Configuration Extended With LLM-Based Code Evolution** Arxiv, 2025. [paper](https://arxiv.org/pdf/2511.14794)
+71. **GraphThought: Graph Combinatorial Optimization with Thought Generation** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.11607)
 
-72. **Improving Existing Optimization Algorithms with LLMs** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.08298)
+72. **Glia: A Human-Inspired AI for Automated Systems Design and Optimization** Arxiv, 2025. [paper](https://arxiv.org/abs/2510.27176)
 
-73. **HIFO-PROMPT: Prompting with Hindsight and Foresight For LLM-Based Automatic Heuristic Design** ICLR, 2025. [paper](https://arxiv.org/pdf/2508.13333)
+73. **Fitness Landscape of Large Language Model-Assisted Automated Algorithm Search** Arxiv, 2025. [paper](https://arxiv.org/pdf/2504.19636)
 
-74. **HeurAgenix: Leveraging LLMs for Solving Complex Combinatorial Optimization Challenges** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.15196), [code](https://github.com/microsoft/HeurAgenix)
+74. **Fine-tuning Large Language Model for Automated Algorithm Design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.10614)
 
-75. **GraphThought: Graph Combinatorial Optimization with Thought Generation** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.11607)
+75. **Experience-guided reflective co-evolution of prompts and heuristics for automatic algorithm design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.24509)
 
-76. **Glia: A Human-Inspired AI for Automated Systems Design and Optimization** Arxiv, 2025. [paper](https://arxiv.org/abs/2510.27176)
+76. **EvoSpeak: Large Language Models for Interpretable Genetic Programming-Evolved Heuristics** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.02686)
 
-77. **Fitness Landscape of Large Language Model-Assisted Automated Algorithm Search** Arxiv, 2025. [paper](https://arxiv.org/pdf/2504.19636)
+77. **EvoCut: Strengthening Integer Programs via Evolution-Guided Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2508.11850), [code](https://github.com/milad1378yz/EvoCut)
 
-78. **Fine-tuning Large Language Model for Automated Algorithm Design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.10614)
+78. **EquivaMap: Leveraging LLMs for Automatic Equivalence Checking of Optimization Formulations** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.14760), [code](https://github.com/HumainLab/EquivaMap)
 
-79. **Experience-guided reflective co-evolution of prompts and heuristics for automatic algorithm design** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.24509)
+79. **Efficient Heuristics Generation for Solving Combinatorial Optimization Problems Using Large Language Models** KDD, 2025. [paper](https://arxiv.org/pdf/2505.12627v1), [code](https://github.com/wuuu110/Hercules)
 
-80. **EvoSpeak: Large Language Models for Interpretable Genetic Programming-Evolved Heuristics** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.02686)
+80. **EALG: Evolutionary Adversarial Generation of Language Model–Guided Generators for Combinatorial Optimization** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.02594)
 
-81. **EvoCut: Strengthening Integer Programs via Evolution-Guided Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2508.11850), [code](https://github.com/milad1378yz/EvoCut)
+81. **Discovering Heuristics with Large Language Models (LLMs) for Mixed-Integer Programs: Single-Machine Scheduling** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.24013)
 
-82. **EquivaMap: Leveraging LLMs for Automatic Equivalence Checking of Optimization Formulations** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.14760), [code](https://github.com/HumainLab/EquivaMap)
+82. **DHEvo: Data-Algorithm Based Heuristic Evolution for Generalizable MILP Solving** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.15615)
 
-83. **Efficient Heuristics Generation for Solving Combinatorial Optimization Problems Using Large Language Models** KDD, 2025. [paper](https://arxiv.org/pdf/2505.12627v1), [code](https://github.com/wuuu110/Hercules)
+83. **DaSAThco: Data-Aware SAT Heuristics Combinations Optimization via Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.12602)
 
-84. **EALG: Evolutionary Adversarial Generation of Language Model–Guided Generators for Combinatorial Optimization** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.02594)
+84. **CP-Bench: Evaluating Large Language Models for Constraint Modelling** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.06052)
 
-85. **Discovering Heuristics with Large Language Models (LLMs) for Mixed-Integer Programs: Single-Machine Scheduling** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.24013)
+85. **Combinatorial Optimization for All: Using LLMs to Aid Non-Experts in Improving Optimization Algorithms** Arxiv, 2025. [paper](https://arxiv.org/pdf/2503.10968), [code](https://github.com/camilochs/comb-opt-for-all)
 
-86. **DHEvo: Data-Algorithm Based Heuristic Evolution for Generalizable MILP Solving** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.15615)
+86. **CogMCTS: A Novel Cognitive-Guided Monte Carlo Tree Search Framework for Iterative Heuristic Evolution with Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2512.08609)
 
-87. **DaSAThco: Data-Aware SAT Heuristics Combinations Optimization via Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.12602)
+87. **CodeEvolve: an open source evolutionary coding agent for algorithm discovery and optimization** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.14150), [code](https://github.com/inter-co/science-codeevolve)
 
-88. **CP-Bench: Evaluating Large Language Models for Constraint Modelling** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.06052)
+88. **Code Evolution Graphs: Understanding Large Language Model Driven Design of Algorithms** GECCO, 2025. [paper](https://arxiv.org/pdf/2503.16668)
 
-89. **Combinatorial Optimization for All: Using LLMs to Aid Non-Experts in Improving Optimization Algorithms** Arxiv, 2025. [paper](https://arxiv.org/pdf/2503.10968), [code](https://github.com/camilochs/comb-opt-for-all)
+89. **Can Large Language Models Be Trusted as Black-Box Evolutionary Optimizers for Combinatorial Problems?** Arxiv, 2025. [paper](https://arxiv.org/pdf/2501.15081)
 
-90. **CogMCTS: A Novel Cognitive-Guided Monte Carlo Tree Search Framework for Iterative Heuristic Evolution with Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2512.08609)
+90. **CALM: Co-evolution of Algorithms and Language Model for Automatic Heuristic Design** ICLR, 2025. [paper](https://arxiv.org/pdf/2505.12285v1)
 
-91. **CodeEvolve: an open source evolutionary coding agent for algorithm discovery and optimization** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.14150), [code](https://github.com/inter-co/science-codeevolve)
+91. **Bridging Visualization and Optimization: Multimodal Large Language Models on Graph-Structured Combinatorial Optimization** Arxiv, 2025. [paper](https://arxiv.org/pdf/2501.11968)
 
-92. **Code Evolution Graphs: Understanding Large Language Model Driven Design of Algorithms** GECCO, 2025. [paper](https://arxiv.org/pdf/2503.16668)
+92. **Behavior and Representation in Large Language Models for Combinatorial Optimization: From Feature Extraction to Algorithm Selection** Arxiv, 2025. [paper](https://arxiv.org/pdf/2512.13374)
 
-93. **CO-Bench: Benchmarking Language Model Agents in Algorithm Search for Combinatorial Optimization** AAAI, 2025. [paper](https://arxiv.org/pdf/2504.04310)
+93. **AutoPBO: LLM-powered Optimization for Local Search PBO Solvers** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.04007)
 
-94. **Can Large Language Models Be Trusted as Black-Box Evolutionary Optimizers for Combinatorial Problems?** Arxiv, 2025. [paper](https://arxiv.org/pdf/2501.15081)
+94. **Autonomous Code Evolution MeetsNP-Completeness** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.07367)
 
-95. **CALM: Co-evolution of Algorithms and Language Model for Automatic Heuristic Design** ICLR, 2025. [paper](https://arxiv.org/pdf/2505.12285v1)
+95. **Automatically discovering heuristics in a complex SAT solver with large language models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.22876)
 
-96. **Bridging Visualization and Optimization: Multimodal Large Language Models on Graph-Structured Combinatorial Optimization** Arxiv, 2025. [paper](https://arxiv.org/pdf/2501.11968)
+96. **Automatic MILP Model Construction for Multi-Robot Task Allocation and Scheduling Based on Large Language Models** IROS, 2025. [paper](https://arxiv.org/pdf/2503.13813)
 
-97. **Behavior and Representation in Large Language Models for Combinatorial Optimization: From Feature Extraction to Algorithm Selection** Arxiv, 2025. [paper](https://arxiv.org/pdf/2512.13374)
+97. **AutoEP: LLMs-Driven Automation of Hyperparameter Evolution for Metaheuristic Algorithms** ICLR, 2025. [paper](https://arxiv.org/pdf/2509.23189)
 
-98. **AutoPBO: LLM-powered Optimization for Local Search PBO Solvers** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.04007)
+98. **ARS: Automatic Routing Solver with Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.15359), [code](https://github.com/Ahalikai/ARS-Routbench)
 
-99. **Autonomous Code Evolution MeetsNP-Completeness** Arxiv, 2025. [paper](https://arxiv.org/pdf/2509.07367)
+99. **An Agentic Framework with LLMs for Solving Complex Vehicle Routing Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.16701)
 
-100. **Automatically discovering heuristics in a complex SAT solver with large language models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2507.22876)
+100. **AlphaEvolve: A coding agent for scientific and algorithmic discovery** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.13131), [code](https://colab.research.google.com/github/google-deepmind/alphaevolve_results/blob/master/mathematical_results.ipynb)
 
-101. **Automatic MILP Model Construction for Multi-Robot Task Allocation and Scheduling Based on Large Language Models** IROS, 2025. [paper](https://arxiv.org/pdf/2503.13813)
+101. **Algorithm Discovery With LLMs: Evolutionary Search Meets Reinforcement Learning** COLM, 2025. [paper](https://arxiv.org/pdf/2504.05108)
 
-102. **AutoEP: LLMs-Driven Automation of Hyperparameter Evolution for Metaheuristic Algorithms** ICLR, 2025. [paper](https://arxiv.org/pdf/2509.23189)
+102. **A Comprehensive Evaluation of Contemporary ML-Based Solvers for Combinatorial Optimization** ICML 2025 Workshop AI4Math, 2025. [paper](https://arxiv.org/pdf/2505.16952), [code](https://huggingface.co/datasets/CO-Bench/FrontierCO)
 
-103. **ARS: Automatic Routing Solver with Large Language Models** Arxiv, 2025. [paper](https://arxiv.org/pdf/2502.15359), [code](https://github.com/Ahalikai/ARS-Routbench)
+103. **Visual Reasoning and Multi-Agent Approach in Multimodal Large Language Models (MLLMs): Solving TSP and mTSP Combinatorial Challenges** Arxiv, 2024. [paper](https://arxiv.org/pdf/2407.00092), [code](https://github.com/ahmed-abdulhuy/Solving-TSP-and-mTSP-Combinatorial-Challenges-using-Visual-Reasoning-and-Multi-Agent-Approach-MLLMs-)
 
-104. **An Agentic Framework with LLMs for Solving Complex Vehicle Routing Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2510.16701)
+104. **UNCO: Towards Unifying Neural Combinatorial Optimization through Large Language Model** Arxiv, 2024. [paper](https://arxiv.org/pdf/2408.12214)
 
-105. **AlphaEvolve: A coding agent for scientific and algorithmic discovery** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.13131), [code](https://colab.research.google.com/github/google-deepmind/alphaevolve_results/blob/master/mathematical_results.ipynb)
+105. **Towards Foundation Models for Mixed Integer Linear Programming** ICLR, 2024. [paper](https://arxiv.org/pdf/2410.08288)
 
-106. **Algorithm Discovery With LLMs: Evolutionary Search Meets Reinforcement Learning** COLM, 2025. [paper](https://arxiv.org/pdf/2504.05108)
+106. **Solving General Natural-Language-Description Optimization Problems with Large Language Models** NAACL, 2024. [paper](https://arxiv.org/pdf/2407.07924), [code](https://opt.alibabacloud.com/chat)
 
-107. **ALE-Bench: A Benchmark for Long-Horizon Objective-Driven Algorithm Engineering** NeurIPS 2025 Datasets and Benchmarks Track, 2025. [paper](https://arxiv.org/pdf/2506.09050), [code](https://github.com/SakanaAI/ALE-Bench)
+107. **Self-Guiding Exploration for Combinatorial Problems** NeurIPS, 2024. [paper](https://arxiv.org/pdf/2405.17950), [code](https://github.com/Zangir/LLM-for-CP)
 
-108. **A Comprehensive Evaluation of Contemporary ML-Based Solvers for Combinatorial Optimization** ICML 2025 Workshop AI4Math, 2025. [paper](https://arxiv.org/pdf/2505.16952), [code](https://huggingface.co/datasets/CO-Bench/FrontierCO)
+108. **RouteExplainer: An Explanation Framework for Vehicle Routing Problem** PAKDD, 2024. [paper](https://arxiv.org/pdf/2403.03585.pdf), [code](https://github.com/ntt-dkiku/route-explainer)
 
-109. **Visual Reasoning and Multi-Agent Approach in Multimodal Large Language Models (MLLMs): Solving TSP and mTSP Combinatorial Challenges** Arxiv, 2024. [paper](https://arxiv.org/pdf/2407.00092), [code](https://github.com/ahmed-abdulhuy/Solving-TSP-and-mTSP-Combinatorial-Challenges-using-Visual-Reasoning-and-Multi-Agent-Approach-MLLMs-)
+109. **ReEvo: Large Language Models as Hyper-Heuristics with Reflective Evolution** NeurIPS, 2024. [paper](https://arxiv.org/pdf/2402.01145), [code](https://github.com/ai4co/reevo)
 
-110. **UNCO: Towards Unifying Neural Combinatorial Optimization through Large Language Model** Arxiv, 2024. [paper](https://arxiv.org/pdf/2408.12214)
+110. **QUBE: Enhancing Automatic Heuristic Design via Quality-Uncertainty Balanced Evolution** Arxiv, 2024. [paper](https://arxiv.org/pdf/2412.20694), [code](https://github.com/zzjchen/QUBE_code)
 
-111. **Towards Foundation Models for Mixed Integer Linear Programming** ICLR, 2024. [paper](https://arxiv.org/pdf/2410.08288)
+111. **ORLM: Training Large Language Models for Optimization Modeling** Operations Research, 2024. [paper](https://arxiv.org/pdf/2405.17743), [code](https://github.com/Cardinal-Operations/ORLM)
 
-112. **Solving General Natural-Language-Description Optimization Problems with Large Language Models** NAACL, 2024. [paper](https://arxiv.org/pdf/2407.07924), [code](https://opt.alibabacloud.com/chat)
+112. **Multi-objective Evolution of Heuristic Using Large Language Model** AAAI, 2024. [paper](https://arxiv.org/pdf/2409.16867)
 
-113. **Self-Guiding Exploration for Combinatorial Problems** NeurIPS, 2024. [paper](https://arxiv.org/pdf/2405.17950), [code](https://github.com/Zangir/LLM-for-CP)
+113. **LLMs can Schedule** Arxiv, 2024. [paper](https://arxiv.org/pdf/2408.06993), [code](https://github.com/starjob42/datasetjsp)
 
-114. **RouteExplainer: An Explanation Framework for Vehicle Routing Problem** PAKDD, 2024. [paper](https://arxiv.org/pdf/2403.03585.pdf), [code](https://github.com/ntt-dkiku/route-explainer)
+114. **LLMOPT: Learning to Define and Solve General Optimization Problems from Scratch** ICLR, 2024. [paper](https://arxiv.org/pdf/2410.13213)
 
-115. **ReEvo: Large Language Models as Hyper-Heuristics with Reflective Evolution** NeurIPS, 2024. [paper](https://arxiv.org/pdf/2402.01145), [code](https://github.com/ai4co/reevo)
+115. **Large Language Models for Combinatorial Optimization of Design Structure Matrix** Arxiv, 2024. [paper](https://arxiv.org/pdf/2411.12571)
 
-116. **QUBE: Enhancing Automatic Heuristic Design via Quality-Uncertainty Balanced Evolution** Arxiv, 2024. [paper](https://arxiv.org/pdf/2412.20694), [code](https://github.com/zzjchen/QUBE_code)
+116. **HSEvo: Elevating Automatic Heuristic Design with Diversity-Driven Harmony Search and Genetic Algorithm Using LLMs** AAAI, 2024. [paper](https://arxiv.org/pdf/2412.14995), [code](https://github.com/datphamvn/HSEvo)
 
-117. **ORLM: Training Large Language Models for Optimization Modeling** Operations Research, 2024. [paper](https://arxiv.org/pdf/2405.17743), [code](https://github.com/Cardinal-Operations/ORLM)
+117. **How Multimodal Integration Boost the Performance of LLM for Optimization: Case Study on Capacitated Vehicle Routing Problems** Arxiv, 2024. [paper](https://arxiv.org/pdf/2403.01757)
 
-118. **Multi-objective Evolution of Heuristic Using Large Language Model** AAAI, 2024. [paper](https://arxiv.org/pdf/2409.16867)
+118. **From Large Language Models and Optimization to Decision Optimization CoPilot: A Research Manifesto** Arxiv, 2024. [paper](https://arxiv.org/pdf/2402.16269)
 
-119. **LLMs can Schedule** Arxiv, 2024. [paper](https://arxiv.org/pdf/2408.06993), [code](https://github.com/starjob42/datasetjsp)
+119. **Eyeballing Combinatorial Problems: A Case Study of Using Multimodal Large Language Models to Solve Traveling Salesman Problems** ISBCom, 2024. [paper](https://arxiv.org/pdf/2406.06865)
 
-120. **LLMOPT: Learning to Define and Solve General Optimization Problems from Scratch** ICLR, 2024. [paper](https://arxiv.org/pdf/2410.13213)
+120. **Evolution of Heuristics: Towards Efficient Automatic Algorithm Design Using Large Language Model** ICML, 2024. [paper](https://arxiv.org/pdf/2401.02051), [code](https://github.com/FeiLiu36/EoH)
 
-121. **Large Language Models for Combinatorial Optimization of Design Structure Matrix** Arxiv, 2024. [paper](https://arxiv.org/pdf/2411.12571)
+121. **Evaluating LLM Reasoning in the Operations Research Domain with ORQA** AAAI, 2024. [paper](https://arxiv.org/pdf/2412.17874), [code](https://github.com/nl4opt/ORQA)
 
-122. **HSEvo: Elevating Automatic Heuristic Design with Diversity-Driven Harmony Search and Genetic Algorithm Using LLMs** AAAI, 2024. [paper](https://arxiv.org/pdf/2412.14995), [code](https://github.com/datphamvn/HSEvo)
+122. **Diagnosing Infeasible Optimization Problems Using Large Language Models** INFOR, 2024. [paper](https://arxiv.org/pdf/2308.12923)
 
-123. **How Multimodal Integration Boost the Performance of LLM for Optimization: Case Study on Capacitated Vehicle Routing Problems** Arxiv, 2024. [paper](https://arxiv.org/pdf/2403.01757)
+123. **Can Large Language Models Solve Robot Routing?** Arxiv, 2024. [paper](https://arxiv.org/pdf/2403.10795), [code](https://github.com/Zhehui-Huang/LLM_Routing)
 
-124. **From Large Language Models and Optimization to Decision Optimization CoPilot: A Research Manifesto** Arxiv, 2024. [paper](https://arxiv.org/pdf/2402.16269)
+124. **AutoSAT: Automatically Optimize SAT Solvers via Large Language Models** Arxiv, 2024. [paper](https://arxiv.org/pdf/2402.10705)
 
-125. **Eyeballing Combinatorial Problems: A Case Study of Using Multimodal Large Language Models to Solve Traveling Salesman Problems** ISBCom, 2024. [paper](https://arxiv.org/pdf/2406.06865)
+125. **Automatic programming via large language models with population self-evolution for dynamic job shop scheduling problem** IEEE Trans. Fuzzy Syst., 2024. [paper](https://arxiv.org/pdf/2410.22657), [code](https://github.com/huangjin-collab/LHH_DFJSP_SeEvo)
 
-126. **Evolution of Heuristics: Towards Efficient Automatic Algorithm Design Using Large Language Model** ICML, 2024. [paper](https://arxiv.org/pdf/2401.02051), [code](https://github.com/FeiLiu36/EoH)
+126. **OptiMUS: Scalable Optimization Modeling with (MI)LP Solvers and Large Language Models** ICML, 2023. [paper](https://arxiv.org/pdf/2402.10172), [code](https://github.com/teshnizi/OptiMUS)
 
-127. **Evaluating LLM Reasoning in the Operations Research Domain with ORQA** AAAI, 2024. [paper](https://arxiv.org/pdf/2412.17874), [code](https://github.com/nl4opt/ORQA)
+127. **Mathematical discoveries from program search with large language models** Nature, 2023. [paper](https://www.nature.com/articles/s41586-023-06924-6), [code](https://github.com/google-deepmind/funsearch)
 
-128. **Diagnosing Infeasible Optimization Problems Using Large Language Models** INFOR, 2024. [paper](https://arxiv.org/pdf/2308.12923)
+128. **Large Language Models for Supply Chain Optimization** Arxiv, 2023. [paper](https://arxiv.org/pdf/2307.03875), [code](https://github.com/microsoft/OptiGuide)
 
-129. **Can Large Language Models Solve Robot Routing?** Arxiv, 2024. [paper](https://arxiv.org/pdf/2403.10795), [code](https://github.com/Zhehui-Huang/LLM_Routing)
+129. **Large Language Models as Optimizers** ICLR, 2023. [paper](https://arxiv.org/pdf/2309.03409), [code](https://github.com/google-deepmind/opro)
 
-130. **AutoSAT: Automatically Optimize SAT Solvers via Large Language Models** Arxiv, 2024. [paper](https://arxiv.org/pdf/2402.10705)
+130. **Large Language Models as Evolutionary Optimizers** CEC, 2023. [paper](https://arxiv.org/pdf/2310.19046), [code](https://github.com/cschen1205/LMEA)
 
-131. **Automatic programming via large language models with population self-evolution for dynamic job shop scheduling problem** IEEE Trans. Fuzzy Syst., 2024. [paper](https://arxiv.org/pdf/2410.22657), [code](https://github.com/huangjin-collab/LHH_DFJSP_SeEvo)
+131. **Chain-of-Experts: When LLMs Meet Complex Operations Research Problems** ICLR, 2023. [paper](https://openreview.net/pdf?id=HobyL1B9CZ), [code](https://github.com/xzymustbexzy/Chain-of-Experts)
 
-132. **OptiMUS: Scalable Optimization Modeling with (MI)LP Solvers and Large Language Models** ICML, 2023. [paper](https://arxiv.org/pdf/2402.10172), [code](https://github.com/teshnizi/OptiMUS)
+132. **Can Language Models Solve Graph Problems in Natural Language?** NeurIPS, 2023. [paper](https://arxiv.org/pdf/2305.10037), [code](https://github.com/Arthur-Heng/NLGraph)
 
-133. **NPHardEval: Dynamic Benchmark on Reasoning Ability of Large Language Models via Complexity Classes** ACL, 2023. [paper](https://arxiv.org/pdf/2312.14890), [code](https://github.com/casmlab/NPHardEval)
+133. **Algorithm Evolution Using Large Language Model** Arxiv, 2023. [paper](https://arxiv.org/pdf/2311.15249)
 
-134. **Mathematical discoveries from program search with large language models** Nature, 2023. [paper](https://www.nature.com/articles/s41586-023-06924-6), [code](https://github.com/google-deepmind/funsearch)
+134. **AI-Copilot for Business Optimisation: A Framework and A Case Study in Production Scheduling** Arxiv, 2023. [paper](https://arxiv.org/pdf/2309.13218), [code](https://github.com/pivithuruthejanamarasinghe/AI-Copilot-Data)
 
-135. **Large Language Models for Supply Chain Optimization** Arxiv, 2023. [paper](https://arxiv.org/pdf/2307.03875), [code](https://github.com/microsoft/OptiGuide)
+---
 
-136. **Large Language Models as Optimizers** ICLR, 2023. [paper](https://arxiv.org/pdf/2309.03409), [code](https://github.com/google-deepmind/opro)
+<a id="survey-papers"></a>
 
-137. **Large Language Models as Evolutionary Optimizers** CEC, 2023. [paper](https://arxiv.org/pdf/2310.19046), [code](https://github.com/cschen1205/LMEA)
-
-138. **Chain-of-Experts: When LLMs Meet Complex Operations Research Problems** ICLR, 2023. [paper](https://openreview.net/pdf?id=HobyL1B9CZ), [code](https://github.com/xzymustbexzy/Chain-of-Experts)
-
-139. **Can Language Models Solve Graph Problems in Natural Language?** NeurIPS, 2023. [paper](https://arxiv.org/pdf/2305.10037), [code](https://github.com/Arthur-Heng/NLGraph)
-
-140. **Algorithm Evolution Using Large Language Model** Arxiv, 2023. [paper](https://arxiv.org/pdf/2311.15249)
-
-141. **AI-Copilot for Business Optimisation: A Framework and A Case Study in Production Scheduling** Arxiv, 2023. [paper](https://arxiv.org/pdf/2309.13218), [code](https://github.com/pivithuruthejanamarasinghe/AI-Copilot-Data)
-
-### [Survey Papers](#content) · *20 papers*
+### [Survey Papers](#content) <img src="https://img.shields.io/static/v1?label=papers&message=20&color=4f46e5&style=flat-square" alt="20 papers" />
 
 1. **Survey on Neural Routing Solvers** Arxiv, 2026. [paper](https://arxiv.org/abs/2602.21761)
 
@@ -450,9 +462,11 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 ---
 
+<a id="problems"></a>
+
 ## [Problems](#content)
 
-### [Job Shop Scheduling Problem](#content) · *42 papers*
+### [Job Shop Scheduling Problem](#content) <img src="https://img.shields.io/static/v1?label=papers&message=42&color=4f46e5&style=flat-square" alt="42 papers" />
 
 1. **ReSched: Rethinking Flexible Job Shop Scheduling from a Transformer-based Architecture with Simplified States** ICLR, 2026. [paper](https://iclr.cc/virtual/2026/poster/10007089), [code](https://github.com/XiangjieXiao/ReSched)
 
@@ -538,7 +552,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 42. **Multi-Agent Reinforcement Learning for Job Shop Scheduling in Flexible Manufacturing Systems** International Conference on Artificial Intelligence for Industries (AI4I), 2019. [paper](https://ieeexplore.ieee.org/document/9027776)
 
-### [Flow Shop Problem](#content) · *12 papers*
+### [Flow Shop Problem](#content) <img src="https://img.shields.io/static/v1?label=papers&message=12&color=4f46e5&style=flat-square" alt="12 papers" />
 
 1. **Multi-Action Self-Improvement for Neural Combinatorial Optimization** ICLR, 2026. [paper](https://arxiv.org/abs/2510.12273), [code](https://github.com/LTluttmann/macsim)
 
@@ -564,7 +578,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 12. **Evolution of Heuristics: Towards Efficient Automatic Algorithm Design Using Large Language Model** ICML, 2024. [paper](https://arxiv.org/pdf/2401.02051), [code](https://github.com/FeiLiu36/EoH)
 
-### [Sorting & Ranking](#content) · *15 papers*
+### [Sorting & Ranking](#content) <img src="https://img.shields.io/static/v1?label=papers&message=15&color=4f46e5&style=flat-square" alt="15 papers" />
 
 1. **LLM-Meta-SR: In-Context Learning for Evolving Selection Operators in Symbolic Regression** Arxiv, 2025. [paper](https://arxiv.org/abs/2505.18602)
 
@@ -596,7 +610,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 15. **Ranking via sinkhorn propagation** Arxiv, 2011. [paper](https://arxiv.org/abs/1106.1925#)
 
-### [Graph Matching](#content) · *28 papers*
+### [Graph Matching](#content) <img src="https://img.shields.io/static/v1?label=papers&message=28&color=4f46e5&style=flat-square" alt="28 papers" />
 
 1. **Learning to Prune Instances of Steiner Tree Problem in Grap** INOC, 2024. [paper](https://openproceedings.org/2024/conf/inoc/INOC_31.pdf), [code](https://github.com/dajwani/alenex22)
 
@@ -654,7 +668,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 28. **Revised Note on Learning Algorithms for Quadratic Assignment with Graph Neural Networks** Arxiv, 2017. [paper](https://arxiv.org/pdf/1706.07450.pdf), [code](https://github.com/alexnowakvila/QAP_pt)
 
-### [Quadratic Assignment Problem](#content) · *4 papers*
+### [Quadratic Assignment Problem](#content) <img src="https://img.shields.io/static/v1?label=papers&message=4&color=4f46e5&style=flat-square" alt="4 papers" />
 
 1. **Towards Quantum Machine Learning for Constrained Combinatorial Optimization: a Quantum QAP Solver** ICML, 2023. [paper](https://icml.cc/virtual/2023/poster/24148)
 
@@ -664,7 +678,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 4. **Revised Note on Learning Algorithms for Quadratic Assignment with Graph Neural Networks** Arxiv, 2017. [paper](https://arxiv.org/pdf/1706.07450.pdf), [code](https://github.com/alexnowakvila/QAP_pt)
 
-### [Travelling Salesman Problem](#content) · *149 papers*
+### [Travelling Salesman Problem](#content) <img src="https://img.shields.io/static/v1?label=papers&message=149&color=4f46e5&style=flat-square" alt="149 papers" />
 
 1. **ViTSP: A Vision Language Models Guided Framework for Solving Large-Scale Traveling Salesman Problems** ICLR, 2026. [paper](https://arxiv.org/abs/2509.23465), [code](https://github.itap.purdue.edu/uSMART/ViTSP_ICLR2026)
 
@@ -964,7 +978,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 149. **Learning Combinatorial Optimization Algorithms over Graphs.** NeurIPS, 2017. [paper](https://arxiv.org/abs/1704.01665)
 
-### [Portfolio Optimization](#content) · *3 papers*
+### [Portfolio Optimization](#content) <img src="https://img.shields.io/static/v1?label=papers&message=3&color=4f46e5&style=flat-square" alt="3 papers" />
 
 1. **Towards One-shot Neural Combinatorial Solvers: Theoretical and Empirical Notes on the Cardinality-Constrained Case** ICLR, 2023. [paper](https://openreview.net/forum?id=h21yJhdzbwz), [code](https://github.com/Thinklab-SJTU/One-Shot-Cardinality-NN-Solver)
 
@@ -972,7 +986,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 3. **Integrating prediction in mean-variance portfolio optimization** Quantitative Finance, 2023. [paper](https://arxiv.org/pdf/2102.09287.pdf)
 
-### [Maximal Cut](#content) · *22 papers*
+### [Maximal Cut](#content) <img src="https://img.shields.io/static/v1?label=papers&message=22&color=4f46e5&style=flat-square" alt="22 papers" />
 
 1. **Scalable Discrete Diffusion Samplers: Combinatorial Optimization and Statistical Physics** ICLR, 2025. [paper](https://openreview.net/pdf?id=peNgxpbdxB)
 
@@ -1018,7 +1032,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 22. **Learning Combinatorial Optimization Algorithms over Graphs.** NeurIPS, 2017. [paper](https://arxiv.org/abs/1704.01665)
 
-### [Vehicle Routing Problem](#content) · *113 papers*
+### [Vehicle Routing Problem](#content) <img src="https://img.shields.io/static/v1?label=papers&message=113&color=4f46e5&style=flat-square" alt="113 papers" />
 
 1. **Towards Efficient Constraint Handling in Neural Solvers for Routing Problems** ICLR, 2026. [paper](https://openreview.net/forum?id=raDFGuQxvD), [code](https://github.com/jieyibi/CaR-constraint)
 
@@ -1246,7 +1260,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 113. **Learning to Perform Local Rewriting for Combinatorial Optimization.** NeurIPS, 2019. [paper](https://arxiv.org/abs/1810.00337), [code](https://github.com/facebookresearch/neural-rewriter)
 
-### [Maximum Independent Set](#content) · *42 papers*
+### [Maximum Independent Set](#content) <img src="https://img.shields.io/static/v1?label=papers&message=42&color=4f46e5&style=flat-square" alt="42 papers" />
 
 1. **Native Adaptive Solution Expansion for Diffusion-based Combinatorial Optimization** ICLR, 2026. [paper](https://openreview.net/forum?id=084SvT55yk)
 
@@ -1332,7 +1346,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 42. **Combinatorial Optimization with Graph Convolutional Networks and Guided Tree Search.** NeurIPS, 2018. [paper](https://arxiv.org/abs/1810.10659)
 
-### [Generalization](#content) · *13 papers*
+### [Generalization](#content) <img src="https://img.shields.io/static/v1?label=papers&message=13&color=4f46e5&style=flat-square" alt="13 papers" />
 
 1. **EvoX: Meta-Evolution for Automated Discovery** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.23413), [code](https://github.com/skydiscover-ai/skydiscover)
 
@@ -1360,7 +1374,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 13. **It's Not What Machines Can Learn It's What We Cannot Teach** ICML, 2020. [paper](http://proceedings.mlr.press/v119/yehuda20a/yehuda20a.pdf)
 
-### [Orienteering Problem](#content) · *24 papers*
+### [Orienteering Problem](#content) <img src="https://img.shields.io/static/v1?label=papers&message=24&color=4f46e5&style=flat-square" alt="24 papers" />
 
 1. **PathWise: Planning through World Model for Automated Heuristic Design via Self-Evolving LLMs** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.20539)
 
@@ -1410,7 +1424,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 24. **A reinforcement learning approach to the orienteering problem with time windows** Computers & Operations Research, 2021. [paper](https://arxiv.org/abs/2011.03647v2), [code](https://github.com/mustelideos/optw_rl)
 
-### [Knapsack](#content) · *41 papers*
+### [Knapsack](#content) <img src="https://img.shields.io/static/v1?label=papers&message=41&color=4f46e5&style=flat-square" alt="41 papers" />
 
 1. **Rethinking LLM-Driven Heuristic Design: Generating Efficient and Specialized Solvers via Dynamics-Aware Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.20868)
 
@@ -1494,7 +1508,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 41. **A Pointer Network Based Deep Learning Algorithm  for 0-1 Knapsack Problem** ICACI, 2018. [paper](https://ieeexplore.ieee.org/abstract/document/8377505)
 
-### [Boolean Satisfiability](#content) · *49 papers*
+### [Boolean Satisfiability](#content) <img src="https://img.shields.io/static/v1?label=papers&message=49&color=4f46e5&style=flat-square" alt="49 papers" />
 
 1. **HeuriGym: An Agentic Benchmark for LLM-Crafted Heuristics in Combinatorial Optimization** ICLR, 2026. [paper](https://arxiv.org/abs/2506.07972), [code](https://github.com/cornell-zhang/heurigym)
 
@@ -1594,7 +1608,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 49. **Graph neural networks and boolean satisfiability.** Arxiv, 2017. [paper](https://arxiv.org/pdf/1702.03592)
 
-### [Computing Resource Allocation](#content) · *6 papers*
+### [Computing Resource Allocation](#content) <img src="https://img.shields.io/static/v1?label=papers&message=6&color=4f46e5&style=flat-square" alt="6 papers" />
 
 1. **A Two-stage Framework and Reinforcement Learning-based Optimization Algorithms for Complex Scheduling Problems** Arxiv, 2021. [paper](https://arxiv.org/abs/2103.05847)
 
@@ -1608,7 +1622,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 6. **Resource Management with Deep Reinforcement Learning.** HotNets, 2016. [paper](https://dl.acm.org/doi/abs/10.1145/3005745.3005750)
 
-### [Bin Packing Problem](#content) · *60 papers*
+### [Bin Packing Problem](#content) <img src="https://img.shields.io/static/v1?label=papers&message=60&color=4f46e5&style=flat-square" alt="60 papers" />
 
 1. **Rethinking LLM-Driven Heuristic Design: Generating Efficient and Specialized Solvers via Dynamics-Aware Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.20868)
 
@@ -1730,7 +1744,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 60. **Small Boxes Big Data: A Deep Learning Approach to Optimize Variable Sized Bin Packing** BigDataService, 2017. [paper](https://ieeexplore.ieee.org/abstract/document/7944923/?casa_token=mRzI_XBy3ycAAAAA:yD9Le2KBNq1TMpW_1etb0RF-oFVcLJj9Up0Z2qI6XJmA-UffxxSZRIx7RklaQED-yXwuwBC4M_w)
 
-### [Graph Edit Distance](#content) · *8 papers*
+### [Graph Edit Distance](#content) <img src="https://img.shields.io/static/v1?label=papers&message=8&color=4f46e5&style=flat-square" alt="8 papers" />
 
 1. **Gelato: Graph Edit Distance via Autoregressive Neural Combinatorial Optimization** ICLR, 2026. [paper](https://openreview.net/forum?id=6ZTcLNmguc), [code](https://github.com/BorgwardtLab/Gelato)
 
@@ -1748,7 +1762,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 8. **Graph Matching Networks for Learning the Similarity of Graph Structured Objects** ICML, 2019. [paper](https://arxiv.org/abs/1904.12787), [code](https://github.com/Lin-Yijie/Graph-Matching-Networks)
 
-### [Hamiltonian Cycle Problem](#content) · *3 papers*
+### [Hamiltonian Cycle Problem](#content) <img src="https://img.shields.io/static/v1?label=papers&message=3&color=4f46e5&style=flat-square" alt="3 papers" />
 
 1. **VSAL: A Vision Solver with Adaptive Layouts for Graph Property Detection** WWW, 2026. [paper](https://arxiv.org/abs/2602.13880), [code](https://github.com/Jiahao-Xie-86/VSAL)
 
@@ -1756,7 +1770,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 3. **A Bi-Level Framework for Learning to Solve Combinatorial Optimization on Graphs** NeurIPS, 2021. [paper](https://arxiv.org/abs/2106.04927), [code](https://github.com/Thinklab-SJTU/PPO-BiHyb)
 
-### [Graph Coloring](#content) · *9 papers*
+### [Graph Coloring](#content) <img src="https://img.shields.io/static/v1?label=papers&message=9&color=4f46e5&style=flat-square" alt="9 papers" />
 
 1. **OPT-BENCH: Evaluating LLM Agent on Large-Scale Search Spaces Optimization Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.10764), [code](https://github.com/OliverLeeXZ/OPT-BENCH)
 
@@ -1776,7 +1790,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 9. **Deep Learning-based Hybrid Graph-Coloring Algorithm for Register Allocation.** Arxiv, 2019. [paper](https://arxiv.org/abs/1912.03700)
 
-### [Maximal Common Subgraph](#content) · *3 papers*
+### [Maximal Common Subgraph](#content) <img src="https://img.shields.io/static/v1?label=papers&message=3&color=4f46e5&style=flat-square" alt="3 papers" />
 
 1. **OPT-BENCH: Evaluating LLM Agent on Large-Scale Search Spaces Optimization Problems** Arxiv, 2025. [paper](https://arxiv.org/pdf/2506.10764), [code](https://github.com/OliverLeeXZ/OPT-BENCH)
 
@@ -1784,7 +1798,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 3. **Fast Detection of Maximum Common Subgraph via Deep Q-Learning.** Arxiv, 2020. [paper](https://arxiv.org/abs/2002.03129)
 
-### [Influence Maximization](#content) · *7 papers*
+### [Influence Maximization](#content) <img src="https://img.shields.io/static/v1?label=papers&message=7&color=4f46e5&style=flat-square" alt="7 papers" />
 
 1. **Can Large Language Models Be Trusted as Black-Box Evolutionary Optimizers for Combinatorial Problems?** Arxiv, 2025. [paper](https://arxiv.org/pdf/2501.15081)
 
@@ -1800,7 +1814,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 7. **Learning Heuristics over Large Graphs via Deep Reinforcement Learning.** NeurIPS, 2020. [paper](https://arxiv.org/abs/1903.03332)
 
-### [Max Clique](#content) · *10 papers*
+### [Max Clique](#content) <img src="https://img.shields.io/static/v1?label=papers&message=10&color=4f46e5&style=flat-square" alt="10 papers" />
 
 1. **ConRep4CO: Contrastive Representation Learning of Combinatorial Optimization Instances across Types** ICLR, 2026. [paper](https://openreview.net/forum?id=OXRnvOOiAf), [code](https://github.com/Thinklab-SJTU/ConRep4CO)
 
@@ -1822,7 +1836,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 10. **Can Hybrid Geometric Scattering Networks Help Solve the Maximum Clique Problem** NeurIPS, 2022. [paper](https://openreview.net/forum?id=uxc8hDSs_xh), [code](https://github.com/yimengmin/geometricscatteringmaximalclique)
 
-### [Mixed Integer Programming](#content) · *101 papers*
+### [Mixed Integer Programming](#content) <img src="https://img.shields.io/static/v1?label=papers&message=101&color=4f46e5&style=flat-square" alt="101 papers" />
 
 1. **Reasoning in a Combinatorial and Constrained World: Benchmarking LLMs on Natural-Language Combinatorial Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.02188)
 
@@ -2026,7 +2040,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 101. **Sequential model-based optimization for general algorithm configuration** International conference on learning and intelligent optimization, 2011. [paper](https://link.springer.com/chapter/10.1007/978-3-642-25566-3_40)
 
-### [Causal Discovery](#content) · *9 papers*
+### [Causal Discovery](#content) <img src="https://img.shields.io/static/v1?label=papers&message=9&color=4f46e5&style=flat-square" alt="9 papers" />
 
 1. **Sample Complexity Bounds for Score-Matching: Causal Discovery and Generative Modeling** NeurIPS, 2023. [paper](https://openreview.net/forum?id=uNnPWR66b8)
 
@@ -2046,11 +2060,11 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 9. **DAGs with NO TEARS: Continuous Optimization for Structure Learning.** NeurIPS, 2018. [paper](https://arxiv.org/pdf/1803.01422.pdf)
 
-### [Game Theoretic Semantics](#content) · *1 papers*
+### [Game Theoretic Semantics](#content) <img src="https://img.shields.io/static/v1?label=papers&message=1&color=4f46e5&style=flat-square" alt="1 papers" />
 
 1. **First-Order Problem Solving through Neural MCTS based Reinforcement Learning.** Arxiv, 2021. [paper](https://arxiv.org/abs/2101.04167)
 
-### [Differentiable Optimization](#content) · *6 papers*
+### [Differentiable Optimization](#content) <img src="https://img.shields.io/static/v1?label=papers&message=6&color=4f46e5&style=flat-square" alt="6 papers" />
 
 1. **SurCo: Learning Linear Surrogates For Combinatorial Nonlinear Optimization Problems** ICML, 2023. [paper](https://arxiv.org/abs/2210.12547), [code](https://github.com/facebookresearch/SurCo)
 
@@ -2064,13 +2078,13 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 6. **Differentiable Learning of Submodular Models** NeurIPS, 2017. [paper](https://papers.NeurIPS.cc/paper/2017/hash/192fc044e74dffea144f9ac5dc9f3395-Abstract.html), [code](https://github.com/josipd/torch-submod)
 
-### [Car Dispatch](#content) · *2 papers*
+### [Car Dispatch](#content) <img src="https://img.shields.io/static/v1?label=papers&message=2&color=4f46e5&style=flat-square" alt="2 papers" />
 
 1. **MAPF-GPT: Imitation Learning for Multi-Agent Pathfinding at Scale** AAAI, 2024. [paper](https://arxiv.org/pdf/2409.00134), [code](https://github.com/Cognitive-AI-Systems/MAPF-GPT)
 
 2. **Dispatch of autonomous vehicles for taxi services: A deep reinforcement learning approach** Transportation Research, 2020. [paper](https://www.sciencedirect.com/science/article/pii/S0968090X19312227)
 
-### [Electronic Design Automation](#content) · *9 papers*
+### [Electronic Design Automation](#content) <img src="https://img.shields.io/static/v1?label=papers&message=9&color=4f46e5&style=flat-square" alt="9 papers" />
 
 1. **HeuriGym: An Agentic Benchmark for LLM-Crafted Heuristics in Combinatorial Optimization** ICLR, 2026. [paper](https://arxiv.org/abs/2506.07972), [code](https://github.com/cornell-zhang/heurigym)
 
@@ -2090,11 +2104,11 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 9. **A graph placement methodology for fast chip design** Nature, 2021. [paper](https://www.nature.com/articles/s41586-021-03544-w.pdf)
 
-### [Conjunctive Query Containment](#content) · *1 papers*
+### [Conjunctive Query Containment](#content) <img src="https://img.shields.io/static/v1?label=papers&message=1&color=4f46e5&style=flat-square" alt="1 papers" />
 
 1. **It's Not What Machines Can Learn It's What We Cannot Teach** ICML, 2020. [paper](http://proceedings.mlr.press/v119/yehuda20a/yehuda20a.pdf)
 
-### [Virtual Network Embedding](#content) · *13 papers*
+### [Virtual Network Embedding](#content) <img src="https://img.shields.io/static/v1?label=papers&message=13&color=4f46e5&style=flat-square" alt="13 papers" />
 
 1. **GAL-VNE: Solving the VNE Problem with Global Reinforcement Learning and Local One-Shot Neural Prediction** KDD, 2023. [paper](https://dl.acm.org/doi/10.1145/3580305.3599358), [code](https://github.com/Thinklab-SJTU/GAL-VNE)
 
@@ -2122,7 +2136,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 13. **Virtual Network Embedding via Monte Carlo Tree Search** IEEE Trans. Cybern, 2017. [paper](https://ieeexplore.ieee.org/document/7859375)
 
-### [Predict+Optimize](#content) · *16 papers*
+### [Predict+Optimize](#content) <img src="https://img.shields.io/static/v1?label=papers&message=16&color=4f46e5&style=flat-square" alt="16 papers" />
 
 1. **Two-Stage Predict+Optimize for Mixed Integer Linear Programs with Unknown Parameters in Constraints** NeurIPS, 2023. [paper](https://openreview.net/forum?id=0tnhFpyWjb), [code](https://github.com/elizabethxyhu/neurips_two_stage_predict-optimize)
 
@@ -2156,7 +2170,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 16. **OptNet: differentiable optimization as a layer in neural networks** ICML, 2017. [paper](https://dl.acm.org/doi/abs/10.5555/3305381.3305396), [code](https://github.com/locuslab/optnet)
 
-### [Optimal Power Flow](#content) · *4 papers*
+### [Optimal Power Flow](#content) <img src="https://img.shields.io/static/v1?label=papers&message=4&color=4f46e5&style=flat-square" alt="4 papers" />
 
 1. **Ensuring DNN Solution Feasibility for Optimization Problems with Linear Constraints** ICLR, 2023. [paper](https://openreview.net/forum?id=QVcDQJdFTG)
 
@@ -2166,7 +2180,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 4. **DeepOPF: A Deep Neural Network Approach for Security-Constrained DC Optimal Power Flow** SmartGridComm, 2019. [paper](https://ieeexplore.ieee.org/document/8909795)
 
-### [Facility Location Problem](#content) · *7 papers*
+### [Facility Location Problem](#content) <img src="https://img.shields.io/static/v1?label=papers&message=7&color=4f46e5&style=flat-square" alt="7 papers" />
 
 1. **TPD-AHD: Textual Preference Differentiation for LLM-Based Automatic Heuristic Design** Under Review, 2025. [paper](https://openreview.net/pdf?id=VEMknlIPtM)
 
@@ -2182,7 +2196,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 7. **Learning to Prune Instances of k-median and Related Problems.** ALENEX, 2022. [paper](https://dx.doi.org/10.1137/1.9781611977042.15), [code](https://github.com/dajwani/alenex22)
 
-### [Combinatorial Drug Recommendation](#content) · *7 papers*
+### [Combinatorial Drug Recommendation](#content) <img src="https://img.shields.io/static/v1?label=papers&message=7&color=4f46e5&style=flat-square" alt="7 papers" />
 
 1. **MoleRec: Combinatorial Drug Recommendation with Substructure-Aware Molecular Representation Learning** WWW, 2023. [paper](https://dl.acm.org/doi/10.1145/3543507.3583872), [code](https://github.com/yangnianzu0515/MoleRec)
 
@@ -2198,7 +2212,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 7. **GAMENet: Graph Augmented MEmory Networks for Recommending Medication Combination** AAAI, 2019. [paper](https://ojs.aaai.org/index.php/AAAI/article/view/3905), [code](https://github.com/sjy1203/GAMENet)
 
-### [Stochastic Combinatorial Optimization](#content) · *8 papers*
+### [Stochastic Combinatorial Optimization](#content) <img src="https://img.shields.io/static/v1?label=papers&message=8&color=4f46e5&style=flat-square" alt="8 papers" />
 
 1. **LLaMEA-SAGE: Guiding Automated Algorithm Design with Structural Feedback from Explainable AI** Arxiv, 2026. [paper](https://arxiv.org/pdf/2601.21511)
 
@@ -2216,7 +2230,7 @@ Papers on **LLM for combinatorial optimization** — work where large language m
 
 8. **Learning fast optimizers for contextual stochastic integer programs** UAI, 2018. [paper](http://auai.org/uai2018/proceedings/papers/217.pdf)
 
-### [Vertex Cover](#content) · *12 papers*
+### [Vertex Cover](#content) <img src="https://img.shields.io/static/v1?label=papers&message=12&color=4f46e5&style=flat-square" alt="12 papers" />
 
 1. **Hard Constraints Meet Soft Generation: Guaranteed Feasibility for LLM-based Combinatorial Optimization** Arxiv, 2026. [paper](https://arxiv.org/pdf/2602.01090)
 
