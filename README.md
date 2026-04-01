@@ -4,66 +4,49 @@
 
 ### At a glance
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Learning4CO;583+curated+rows;141+LLM+for+CO;20+survey+papers;36+problem+areas;239+with+code+links&font=JetBrains+Mono&weight=600&size=22&duration=2800&pause=900&color=22D3EE&center=true&vCenter=true&width=640&height=55&repeat=true" alt="Learning4CO stats carousel" />
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com/?lines=Learning4CO;583+papers+indexed;141+tagged+for+LLM+for+CO;20+in+survey+section;36+problem+categories;239+with+code+repo&font=Inter&weight=600&size=24&duration=2600&pause=1000&color=312E81&background=transparent&center=true&vCenter=true&width=680&height=50&repeat=true" alt="Learning4CO" />
+
+<p dir="auto">
+  <img src="https://img.shields.io/static/v1?label=Papers&message=583&color=4f46e5&style=flat-square&logo=bookstack&logoColor=white" alt="Papers: 583" />
+  <img src="https://img.shields.io/static/v1?label=LLM%20for%20CO&message=141&color=7c3aed&style=flat-square&logo=openai&logoColor=white" alt="LLM for CO: 141" />
+  <img src="https://img.shields.io/static/v1?label=Surveys&message=20&color=0e7490&style=flat-square&logo=readthedocs&logoColor=white" alt="Surveys: 20" />
+  <img src="https://img.shields.io/static/v1?label=Categories&message=36&color=475569&style=flat-square" alt="Categories: 36" />
+  <img src="https://img.shields.io/static/v1?label=With%20code&message=239&color=059669&style=flat-square&logo=github&logoColor=white" alt="With code: 239" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=Entries&message=583&color=0f766e&style=for-the-badge&logo=bookstack&logoColor=white" alt="Entries: 583" />
-  &nbsp;
-  <img src="https://img.shields.io/static/v1?label=LLM%20for%20CO&message=141&color=6d28d9&style=for-the-badge&logo=openai&logoColor=white" alt="LLM for CO: 141" />
-  &nbsp;
-  <img src="https://img.shields.io/static/v1?label=Surveys&message=20&color=1d4ed8&style=for-the-badge&logo=readthedocs&logoColor=white" alt="Surveys: 20" />
-  &nbsp;
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=Problem%20areas&message=36&color=475569&style=for-the-badge" alt="Problem areas: 36" />
-  &nbsp;
-  <img src="https://img.shields.io/static/v1?label=With%20code&message=239&color=15803d&style=for-the-badge&logo=github&logoColor=white" alt="With code: 239" />
-  &nbsp;
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=README&message=Markdown&color=111827&style=for-the-badge&logo=markdown&logoColor=white" alt="README" />
-  &nbsp;
-  <img src="https://img.shields.io/static/v1?label=Generator&message=Python%203&color=1e3a5f&style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
-</p>
-
-<details>
-<summary><strong>What these numbers mean</strong></summary>
-
-| Metric | Meaning |
-|--------|--------|
-| **Entries** | Rows in `data/papers.csv` (one row can map to several problem sections). |
-| **LLM for CO** | Rows with `llm_for_co` set — listed in the top LLM block. |
-| **Surveys** | Papers under **Survey Papers**. |
-| **Problem areas** | Distinct problem categories in the TOC. |
-| **With code** | Rows that include a repository URL in the `code` column. |
-
-</details>
-
-> **Tip:** Jump with the **Navigate** table below, or search the page (`Ctrl+F` / `Cmd+F`) by venue, author, or keyword.
-
-```mermaid
-flowchart LR
-  A[LLM for CO] --> L[Curated links]
-  B[Surveys] --> L
-  C[By problem] --> L
-```
-
-*LLM* entries also appear again under **Problems** when their `category` matches. *Surveys* are cross-cutting; *By problem* follows classic CO domains.
+</div>
 
 ---
 
 ## [Content](#content)
 
+### Navigate
+
 <table>
 <thead>
-<tr><th colspan="2">Navigate</th></tr>
+<tr><th align="left">Three tracks — pick where to start</th></tr>
 </thead>
 <tbody>
-<tr><td colspan="2" align="center"><a href="#llm-for-combinatorial-optimization"><strong>1 · LLM for CO</strong></a> · <a href="#survey-papers"><strong>2 · Surveys</strong></a> · <a href="#problems"><strong>3 · Problems</strong></a></td></tr>
+<tr><td valign="top"><a href="#llm-for-combinatorial-optimization"><strong>① LLM for CO</strong></a><br />
+LLMs, agents &amp; tool use for combinatorial optimization</td></tr>
+<tr><td valign="top"><a href="#survey-papers"><strong>② Surveys</strong></a><br />
+Broad reviews &amp; methodology surveys</td></tr>
+<tr><td valign="top"><a href="#problems"><strong>③ Problems</strong></a><br />
+Papers by <strong>problem type</strong> (TSP, MIP, SAT, …)</td></tr>
+</tbody>
+</table>
+
+---
+
+#### Problem categories
+
+<table>
+<thead>
+<tr><th colspan="2" align="center">Quick links by domain</th></tr>
+</thead>
+<tbody>
 <tr>
 	<td>&emsp;<a href=#job-shop-scheduling-problem>3.1 Job Shop Scheduling Problem (JSSP)</a></td>
 	<td>&emsp;<a href=#flow-shop-problem>3.2 Flow Shop Problem (FSP)</a></td>
@@ -143,7 +126,7 @@ flowchart LR
 
 ### [LLM for Combinatorial Optimization](#content) · *141 papers*
 
-Papers where **large language models** (or closely related agents / prompts / automatic heuristic design with LLMs) are central. These entries are also listed under **Problems** when they match a problem category. Tag rows in `papers.csv` with `llm_for_co` = `1` to include a paper here.
+Papers on **LLM for combinatorial optimization** — work where large language models (or closely related agents and tool use) are central to CO.
 
 1. **ViTSP: A Vision Language Models Guided Framework for Solving Large-Scale Traveling Salesman Problems** ICLR, 2026. [paper](https://arxiv.org/abs/2509.23465), [code](https://github.itap.purdue.edu/uSMART/ViTSP_ICLR2026)
     *Zhuoli Yin, Yi Ding, Reem Khir, Hua Cai*

@@ -117,13 +117,14 @@ def _shield_static(
     *,
     logo: str | None = None,
     logo_color: str = "white",
+    style: str = "flat-square",
 ) -> str:
     """Shields.io static/v1 URL (works well with spaces in label/message)."""
     parts = [
         f"label={quote(label)}",
         f"message={quote(str(message))}",
         f"color={quote(color)}",
-        "style=for-the-badge",
+        f"style={quote(style)}",
     ]
     if logo:
         parts.append(f"logo={quote(logo)}")
@@ -133,14 +134,15 @@ def _shield_static(
 
 def _typing_svg_url(lines: list[str]) -> str:
     """Animated rotating lines (renders as SVG on GitHub). Uses readme-typing-svg.demolab.com."""
-    # API expects semicolon-separated phrases; use + for spaces (not %20).
     enc = ";".join(line.strip().replace(" ", "+") for line in lines if line.strip())
     return (
         "https://readme-typing-svg.demolab.com/?"
         f"lines={enc}"
-        "&font=JetBrains+Mono&weight=600&size=22"
-        "&duration=2800&pause=900"
-        "&color=22D3EE&center=true&vCenter=true&width=640&height=55"
+        "&font=Inter&weight=600&size=24"
+        "&duration=2600&pause=1000"
+        "&color=312E81"
+        "&background=transparent"
+        "&center=true&vCenter=true&width=680&height=50"
         "&repeat=true"
     )
 
@@ -148,80 +150,56 @@ def _typing_svg_url(lines: list[str]) -> str:
 def _write_at_a_glance(
     file,
     *,
-    n_total: int,
+    n_papers: int,
     n_llm: int,
     survey_n: int,
     n_categories: int,
     n_with_code: int,
 ) -> None:
-    """Centered typing animation + Shields badges + compact legend."""
+    """Centered hero line + flat Shields row; wording uses 'papers' not CSV rows."""
     typing_lines = [
         "Learning4CO",
-        f"{n_total} curated rows",
-        f"{n_llm} LLM for CO",
-        f"{survey_n} survey papers",
-        f"{n_categories} problem areas",
-        f"{n_with_code} with code links",
+        f"{n_papers} papers indexed",
+        f"{n_llm} tagged for LLM for CO",
+        f"{survey_n} in survey section",
+        f"{n_categories} problem categories",
+        f"{n_with_code} with code repo",
     ]
     file.write("### At a glance\n\n")
-    file.write('<p align="center">\n')
     file.write(
-        f'  <img src="{_typing_svg_url(typing_lines)}" alt="Learning4CO stats carousel" />\n'
+        '<div align="center">\n\n'
+        f'<img src="{_typing_svg_url(typing_lines)}" alt="Learning4CO" />\n\n'
     )
-    file.write("</p>\n\n")
     badges: list[tuple[str, str, str, str | None]] = [
-        ("Entries", str(n_total), "0f766e", "bookstack"),
-        ("LLM for CO", str(n_llm), "6d28d9", "openai"),
-        ("Surveys", str(survey_n), "1d4ed8", "readthedocs"),
-        ("Problem areas", str(n_categories), "475569", None),
-        ("With code", str(n_with_code), "15803d", "github"),
+        ("Papers", str(n_papers), "4f46e5", "bookstack"),
+        ("LLM for CO", str(n_llm), "7c3aed", "openai"),
+        ("Surveys", str(survey_n), "0e7490", "readthedocs"),
+        ("Categories", str(n_categories), "475569", None),
+        ("With code", str(n_with_code), "059669", "github"),
     ]
-    mid = (len(badges) + 1) // 2
-    for row in (badges[:mid], badges[mid:]):
-        file.write('<p align="center">\n')
-        for label, msg, color, logo in row:
-            url = (
-                _shield_static(label, msg, color, logo=logo)
-                if logo
-                else _shield_static(label, msg, color)
-            )
-            file.write(f'  <img src="{url}" alt="{label}: {msg}" />\n  &nbsp;\n')
-        file.write("</p>\n\n")
-
-    file.write('<p align="center">\n')
-    file.write(
-        f'  <img src="{_shield_static("README", "Markdown", "111827", logo="markdown")}" alt="README" />\n  &nbsp;\n'
-    )
-    file.write(
-        f'  <img src="{_shield_static("Generator", "Python 3", "1e3a5f", logo="python", logo_color="ffdd54")}" alt="Python" />\n'
-    )
+    file.write('<p dir="auto">\n')
+    for label, msg, color, logo in badges:
+        url = (
+            _shield_static(label, msg, color, logo=logo, style="flat-square")
+            if logo
+            else _shield_static(label, msg, color, style="flat-square")
+        )
+        file.write(f'  <img src="{url}" alt="{label}: {msg}" />\n')
     file.write("</p>\n\n")
 
     if GITHUB_REPO_SLUG:
         slug = GITHUB_REPO_SLUG.strip()
         if slug and "/" in slug:
-            file.write('<p align="center">\n')
-            stars = f"https://img.shields.io/github/stars/{slug}?style=for-the-badge&logo=github&label=Stars&color=181717"
-            forks = f"https://img.shields.io/github/forks/{slug}?style=for-the-badge&logo=github&label=Forks&color=181717"
-            file.write(f'  <a href="https://github.com/{slug}"><img src="{stars}" alt="GitHub stars" /></a>\n  &nbsp;\n')
-            file.write(f'  <a href="https://github.com/{slug}"><img src="{forks}" alt="GitHub forks" /></a>\n')
-            file.write("</p>\n\n")
+            stars = f"https://img.shields.io/github/stars/{slug}?style=flat-square&logo=github&label=stars&color=181717"
+            forks = f"https://img.shields.io/github/forks/{slug}?style=flat-square&logo=github&label=forks&color=181717"
+            file.write(
+                f'<p dir="auto">\n'
+                f'  <a href="https://github.com/{slug}"><img src="{stars}" alt="GitHub stars" /></a>\n'
+                f'  <a href="https://github.com/{slug}"><img src="{forks}" alt="GitHub forks" /></a>\n'
+                f"</p>\n\n"
+            )
 
-    file.write("<details>\n<summary><strong>What these numbers mean</strong></summary>\n\n")
-    file.write(
-        "| Metric | Meaning |\n"
-        "|--------|--------|\n"
-        f"| **Entries** | Rows in `data/papers.csv` (one row can map to several problem sections). |\n"
-        f"| **LLM for CO** | Rows with `llm_for_co` set — listed in the top LLM block. |\n"
-        f"| **Surveys** | Papers under **Survey Papers**. |\n"
-        f"| **Problem areas** | Distinct problem categories in the TOC. |\n"
-        f"| **With code** | Rows that include a repository URL in the `code` column. |\n\n"
-    )
-    file.write("</details>\n\n")
-    file.write(
-        "> **Tip:** Jump with the **Navigate** table below, or search the page "
-        "(`Ctrl+F` / `Cmd+F`) by venue, author, or keyword.\n\n"
-    )
+    file.write("</div>\n\n")
 
 
 def _write_paper_entry(file, num: int, paper: list[str]) -> None:
@@ -310,31 +288,34 @@ def csv2md(csv_path, md_path, header_path):
         survey_n = section_counts.get("Survey Papers", 0)
         _write_at_a_glance(
             file,
-            n_total=n_total,
+            n_papers=n_total,
             n_llm=len(llm_list),
             survey_n=survey_n,
             n_categories=len(problem_classes),
             n_with_code=n_with_code,
         )
-        file.write("```mermaid\n")
-        file.write("flowchart LR\n")
-        file.write("  A[LLM for CO] --> L[Curated links]\n")
-        file.write("  B[Surveys] --> L\n")
-        file.write("  C[By problem] --> L\n")
-        file.write("```\n\n")
-        file.write(
-            "*LLM* entries also appear again under **Problems** when their `category` matches. "
-            "*Surveys* are cross-cutting; *By problem* follows classic CO domains.\n\n"
-        )
         file.write("---\n\n")
         file.write("## [Content](#content)\n\n")
-        file.write('<table>\n<thead>\n<tr><th colspan="2">Navigate</th></tr>\n</thead>\n<tbody>\n')
+        file.write("### Navigate\n\n")
         file.write(
-            '<tr><td colspan="2" align="center">'
-            '<a href="#llm-for-combinatorial-optimization"><strong>1 · LLM for CO</strong></a> · '
-            '<a href="#survey-papers"><strong>2 · Surveys</strong></a> · '
-            '<a href="#problems"><strong>3 · Problems</strong></a>'
-            "</td></tr>\n"
+            '<table>\n'
+            "<thead>\n"
+            '<tr><th align="left">Three tracks — pick where to start</th></tr>\n'
+            "</thead>\n"
+            "<tbody>\n"
+            '<tr><td valign="top"><a href="#llm-for-combinatorial-optimization"><strong>① LLM for CO</strong></a><br />\n'
+            "LLMs, agents &amp; tool use for combinatorial optimization</td></tr>\n"
+            '<tr><td valign="top"><a href="#survey-papers"><strong>② Surveys</strong></a><br />\n'
+            "Broad reviews &amp; methodology surveys</td></tr>\n"
+            '<tr><td valign="top"><a href="#problems"><strong>③ Problems</strong></a><br />\n'
+            "Papers by <strong>problem type</strong> (TSP, MIP, SAT, …)</td></tr>\n"
+            "</tbody>\n"
+            "</table>\n\n"
+        )
+        file.write("---\n\n")
+        file.write("#### Problem categories\n\n")
+        file.write(
+            '<table>\n<thead>\n<tr><th colspan="2" align="center">Quick links by domain</th></tr>\n</thead>\n<tbody>\n'
         )
         for i in range((len(problem_classes) + 1) // 2):
             name1 = problem_classes[2 * i]
@@ -381,13 +362,11 @@ def csv2md(csv_path, md_path, header_path):
             file.write(f" · *{len(llm_list)} papers*")
         file.write("\n\n")
         file.write(
-            "Papers where **large language models** (or closely related agents / prompts / "
-            "automatic heuristic design with LLMs) are central. "
-            "These entries are also listed under **Problems** when they match a problem category. "
-            "Tag rows in `papers.csv` with `llm_for_co` = `1` to include a paper here.\n\n"
+            "Papers on **LLM for combinatorial optimization** — work where large language models "
+            "(or closely related agents and tool use) are central to CO.\n\n"
         )
         if not llm_list:
-            file.write("*No rows tagged yet — set column `llm_for_co` to `1` in `data/papers.csv`.*\n\n")
+            file.write("*No papers in this section yet.*\n\n")
         else:
             num = 0
             for paper in llm_list:
