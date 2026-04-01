@@ -1,5 +1,5 @@
-# Repository layout
+# Learning4CO — repository layout
 
-- `README.md` is **generated**. Do not edit it by hand; change `data/papers.csv` and run `python src/generator.py` from the `src` directory (or `cd src && python generator.py`).
+- `README.md` is **generated**. Do not edit it by hand; change `data/papers.csv` and run `python src/generator.py` from the repository root.
 - Intro text and the content table header live in `data/header.md`.
-- Initial `papers.csv` was bootstrapped from a sibling clone of [Thinklab-SJTU/awesome-ml4co](https://github.com/Thinklab-SJTU/awesome-ml4co); `llm_for_co` was heuristically filled—review and extend (see `CONTRIBUTING.md`).
+- Optional GitHub **Stars / Forks** badges: set `GITHUB_REPO_SLUG = "you/repo"` near the top of `src/generator.py`, then regenerate the README.
